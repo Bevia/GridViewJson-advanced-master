@@ -1,0 +1,214 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/horizontal1Forlinear1"
+        android:orientation="horizontal"
+        android:layout_height="350dp"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_weight="0.5">
+
+            <LinearLayout
+                android:id="@+id/linear1LSVL"
+                android:layout_weight="0.25"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/linearRelative1"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:background="@color/darkgrey">
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:id="@+id/progressBar"
+                        android:visibility="gone"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_horizontal" />
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"
+                        android:scaleType="centerCrop" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear1LSVR"
+                android:layout_weight="0.25"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linear1LSVRUp"
+                    android:layout_weight="0.09"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:background="@color/silver"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView1linear1LSVRUpUp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginTop="0dp"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:paddingTop="2dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/Black"
+                        android:text="testing new adapter #1"
+                        android:textSize="11sp" />
+
+                    <!-- android:gravity="center_vertical|center_horizontal" -->
+
+                    <TextView
+                        android:id="@+id/textView1linear1LSVRUpBottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="4dp"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:paddingTop="0dp"
+                        android:maxLines="18"
+                        android:ellipsize="end"
+                        android:background="@null"
+                        android:textColor="@color/Black"
+                        android:text="testing new adapter #1"
+                        android:textSize="9sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear1LSVRBottom"
+                    android:layout_weight="0.16"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView1linear1LSVRBottomUp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="4dp"
+                            android:paddingTop="0dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:background="@null"
+                            android:gravity="bottom"
+                            android:textColor="@color/blue_stone"
+                            android:text="testing new adapter #1"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/textView2linear1LSVRBottomBottom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="0dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:background="@null"
+                            android:textColor="@color/Black"
+                            android:layout_below="@+id/textView1linear1LSVRBottomUp"
+                            android:text="testing new adapter #1"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/textView3linear1LSVRBottomUp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:background="@null"
+                            android:gravity="bottom"
+                            android:textColor="@color/blue_stone"
+                            android:text="testing new adapter #1"
+                            android:layout_below="@+id/textView2linear1LSVRBottomBottom"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/textView4linear1LSVRBottomBottom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="0dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:background="@null"
+                            android:textColor="@color/Black"
+                            android:text="testing new adapter #1"
+                            android:layout_below="@+id/textView3linear1LSVRBottomUp"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/textView5linear1LSVRBottomUp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:background="@null"
+                            android:gravity="bottom"
+                            android:textColor="@color/blue_stone"
+                            android:text="testing new adapter #1"
+                            android:layout_below="@+id/textView4linear1LSVRBottomBottom"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/textView6linear1LSVRBottomBottom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="0dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:background="@null"
+                            android:textColor="@color/Black"
+                            android:text="testing new adapter #1"
+                            android:layout_below="@+id/textView5linear1LSVRBottomUp"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/silver" />
+
+</FrameLayout>

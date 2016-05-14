@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">GridViewJson</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="desc_img_row">desc image row</string>
+    <string name="text_view_row">Hello How Are you</string>
+
+    <string name="linear_view_horizontal">linear View Horizontal</string>
+    <string name="linear_view_vertical">linear View Vertical</string>
+    <string name="grid_view">Grid View</string>
+    <string name="staggered_view_horizontal">Staggered View Horizontal</string>
+    <string name="staggered_view_vertical">Staggered View Vertical</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
