@@ -3,33 +3,55 @@ Android GridView example. Images and data both taken from Assets. The data is re
 
 Dependencies you will need (included in the code)
 
-        dependencies {
-        
-        ...
-        
-        compile 'com.google.code.gson:gson:2.4'
-        
-        compile 'com.squareup.picasso:picasso:2.5.2'
-        
-        }
-
-        added Butterknife 8.0
-        
-        buildscript {
-          repositories {
-            mavenCentral()
-           }
-          dependencies {
-            classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
-          }
-        }
-        
+        apply plugin: 'com.android.application'
         apply plugin: 'com.neenbedankt.android-apt'
         
-        dependencies {
-          compile 'com.jakewharton:butterknife:8.0.1'
-          apt 'com.jakewharton:butterknife-compiler:8.0.1'
+        android {
+            compileSdkVersion 23
+            buildToolsVersion "23.0.2"
+        
+            defaultConfig {
+                applicationId "com.corebaseit.gridviewjson"
+                minSdkVersion 15
+                targetSdkVersion 23
+                versionCode 1
+                versionName "1.0"
+            }
+            buildTypes {
+                release {
+                    minifyEnabled false
+                    proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                }
+            }
         }
+        
+        dependencies {
+            compile fileTree(dir: 'libs', include: ['*.jar'])
+            testCompile 'junit:junit:4.12'
+            compile 'com.android.support:appcompat-v7:23.3.0'
+            compile 'com.android.support:design:23.3.0'
+            compile 'com.google.code.gson:gson:2.4'
+            compile 'com.jakewharton:butterknife:8.0.1'
+            apt 'com.jakewharton:butterknife-compiler:8.0.1'
+            compile 'com.squareup.picasso:picasso:2.5.2'
+            compile 'com.android.support:recyclerview-v7:23.+'
+            compile 'com.android.support:cardview-v7:23.+'
+            compile 'com.android.support:support-v4:23.3.0'
+        }
+        
+        and in project:
+        
+        buildscript {
+        repositories {
+        jcenter()
+    }
+         dependencies {
+                classpath 'com.android.tools.build:gradle:2.1.0'
+                classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+         }
+        }
+        
+        
 
 Main View image (GridView):
 
