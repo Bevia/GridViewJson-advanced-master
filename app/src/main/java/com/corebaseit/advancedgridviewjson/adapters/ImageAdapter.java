@@ -42,6 +42,9 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
 
     private Context context;
@@ -83,74 +86,63 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
         return 0;
     }
 
-    public static class ViewHolder {
+    static class ViewHolder {
 
-        public ImageView imageView;
-        public TextView bio;
-        public TextView name;
-        public TextView poem1;
-        public TextView poem2;
-        public TextView poem3;
-        public TextView actor1;
-        public TextView actor2;
-        public TextView actor3;
-        public ProgressBar progressBar;
+        @BindView(R.id.image) ImageView imageView;
+        @BindView(R.id.textView1linear1LSVRUpUp) TextView name;
+        @BindView(R.id.textView1linear1LSVRBottomUp) TextView poem1;
+        @BindView(R.id.textView3linear1LSVRBottomUp) TextView poem2;
+        @BindView(R.id.textView5linear1LSVRBottomUp) TextView poem3;
+        @BindView(R.id.textView2linear1LSVRBottomBottom) TextView actor1;
+        @BindView(R.id.textView4linear1LSVRBottomBottom) TextView actor2;
+        @BindView(R.id.textView6linear1LSVRBottomBottom) TextView actor3;
+        @BindView(R.id.textView1linear1LSVRUpBottom) TextView bio;
+        @BindView(R.id.progressBar) ProgressBar progressBar;
 
+        public ViewHolder(View view) {
+            ButterKnife.bind(this, view);
+        }
     }
 
-    public View getView(final int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View view, ViewGroup parent) {
 
         ViewHolder holder;
 
-        if (convertView == null) {
+        if (view != null) {
+            holder = (ViewHolder) view.getTag();
+        }else {
 
-            holder = new ViewHolder();
+            view = poeticaPoetsInflater.inflate(R.layout.gridview_layout, parent, false);
+            holder = new ViewHolder(view);
+            view.setTag(holder);
 
-            convertView = poeticaPoetsInflater.inflate(R.layout.gridview_layout, parent, false);
-
-            holder.imageView = (ImageView) convertView.findViewById(R.id.image);
-
-            holder.progressBar = (ProgressBar) convertView.findViewById(R.id.progressBar);
             progressView = holder.progressBar;
 
-            holder.bio = (TextView) convertView.findViewById(R.id.textView1linear1LSVRUpBottom);
-            ((TextView) convertView.findViewById(R.id.textView1linear1LSVRUpBottom)).setTypeface(Typeface.
-                    createFromAsset(convertView.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
+            ((TextView) view.findViewById(R.id.textView1linear1LSVRUpBottom)).setTypeface(Typeface.
+                    createFromAsset(view.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
 
-            holder.name = (TextView) convertView.findViewById(R.id.textView1linear1LSVRUpUp);
-            ((TextView) convertView.findViewById(R.id.textView1linear1LSVRUpUp)).setTypeface(Typeface.
-                    createFromAsset(convertView.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
-
-            holder.poem1 = (TextView) convertView.findViewById(R.id.textView1linear1LSVRBottomUp);
-            ((TextView) convertView.findViewById(R.id.textView1linear1LSVRBottomUp)).setTypeface(Typeface.
-                    createFromAsset(convertView.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
-
-            holder.poem2 = (TextView) convertView.findViewById(R.id.textView3linear1LSVRBottomUp);
-            ((TextView) convertView.findViewById(R.id.textView3linear1LSVRBottomUp)).setTypeface(Typeface.
-                    createFromAsset(convertView.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
-
-            holder.poem3 = (TextView) convertView.findViewById(R.id.textView5linear1LSVRBottomUp);
-            ((TextView) convertView.findViewById(R.id.textView5linear1LSVRBottomUp)).setTypeface(Typeface.
-                    createFromAsset(convertView.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
-
-            holder.actor1 = (TextView) convertView.findViewById(R.id.textView2linear1LSVRBottomBottom);
-            ((TextView) convertView.findViewById(R.id.textView2linear1LSVRBottomBottom)).setTypeface(Typeface.
-                    createFromAsset(convertView.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
-
-            holder.actor2 = (TextView) convertView.findViewById(R.id.textView4linear1LSVRBottomBottom);
-            ((TextView) convertView.findViewById(R.id.textView4linear1LSVRBottomBottom)).setTypeface(Typeface.
-                    createFromAsset(convertView.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
-
-            holder.actor3 = (TextView) convertView.findViewById(R.id.textView6linear1LSVRBottomBottom);
-            ((TextView) convertView.findViewById(R.id.textView6linear1LSVRBottomBottom)).setTypeface(Typeface.
-                    createFromAsset(convertView.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
+            ((TextView) view.findViewById(R.id.textView1linear1LSVRUpUp)).setTypeface(Typeface.
+                    createFromAsset(view.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
 
 
-            convertView.setTag(holder);
+            ((TextView) view.findViewById(R.id.textView1linear1LSVRBottomUp)).setTypeface(Typeface.
+                    createFromAsset(view.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
 
-        } else {
+            ((TextView) view.findViewById(R.id.textView3linear1LSVRBottomUp)).setTypeface(Typeface.
+                    createFromAsset(view.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
 
-            holder = (ViewHolder) convertView.getTag();
+            ((TextView) view.findViewById(R.id.textView5linear1LSVRBottomUp)).setTypeface(Typeface.
+                    createFromAsset(view.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
+
+            ((TextView) view.findViewById(R.id.textView2linear1LSVRBottomBottom)).setTypeface(Typeface.
+                    createFromAsset(view.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
+
+            ((TextView) view.findViewById(R.id.textView4linear1LSVRBottomBottom)).setTypeface(Typeface.
+                    createFromAsset(view.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
+
+            ((TextView) view.findViewById(R.id.textView6linear1LSVRBottomBottom)).setTypeface(Typeface.
+                    createFromAsset(view.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
+
         }
 
         final ElsPoetesJsonDataModel flower = poetsList.get(position);
@@ -221,7 +213,7 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
             }
         });
 
-        return convertView;
+        return view;
     }
 
     private void datos(int position) {

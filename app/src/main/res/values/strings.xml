@@ -13,4 +13,19 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+  <!--  <string name="TAG_NUMER_OF_FIRST_POEM">fisrt_poem</string>
+    <string name="TAG_NUMER_OF_SECOND_POEM">second_poem</string>
+    <string name="TAG_NUMER_OF_THIRD_POEM">third_poem</string>
+    <string name="EXTRA_PASS_JSON_DATA_TO_POPUPVIEW_1">DATA</string>
+    <string name="EXTRA_PASS_JSON_DATA_TO_POPUPVIEW_2">TEXT</string>
+    <string name="EXTRA_PASS_IMAGE_DATA_TO_POPUPVIEW_1">IMAGE</string>
+    <string name="EXTRA_PASS_JSON_POEM_1">POEM1</string>
+    <string name="EXTRA_PASS_JSON_POEM_2">POEM2</string>
+    <string name="EXTRA_PASS_JSON_POEM_3">POEM3</string>
+    <string name="EXTRA_PASS_JSON_POEM_ACTOR_1">POEMACTOR1</string>
+    <string name="EXTRA_PASS_JSON_POEM_ACTOR_2">POEMACTOR2</string>
+    <string name="EXTRA_PASS_JSON_POEM_ACTOR_3">POEMACTOR3</string>
+-->
+
 </resources>

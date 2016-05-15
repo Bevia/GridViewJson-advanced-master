@@ -12,10 +12,23 @@ import android.widget.Toast;
 
 import java.io.IOException;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * Created by vincent on 10/2/16.
  */
 public class ElsPoetesPopUpView extends Activity {
+
+    @BindView(R.id.pupUpImage) ImageView image1;
+    @BindView(R.id.textUpperSide1) TextView textUpperSide1;
+    @BindView(R.id.textUpperSide2) TextView textUpperSide2;
+    @BindView(R.id.textView2linear1LSVRBottomBottom) TextView textViewActor1;
+    @BindView(R.id.textView4linear1LSVRBottomBottom) TextView textViewActor2;
+    @BindView(R.id.textView5linear1LSVRBottomBottom) TextView textViewActor3;
+    @BindView(R.id.textView1linear1LSVRBottomUp) TextView textviewPoem1;
+    @BindView(R.id.textView3linear1LSVRBottomUp) TextView textviewPoem2;
+    @BindView(R.id.textView5linear1LSVRBottomUp) TextView textviewPoem3;
 
     private static final String EXTRA_PASS_JSON_DATA_TO_POPUPVIEW_1 = "DATA";
     private static final String EXTRA_PASS_IMAGE_DATA_TO_POPUPVIEW_1 = "IMAGE";
@@ -46,8 +59,8 @@ public class ElsPoetesPopUpView extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.popup_view_class);
+        ButterKnife.bind(this);
 
         Bundle extras = getIntent().getExtras();
         //Data:
@@ -79,66 +92,31 @@ public class ElsPoetesPopUpView extends Activity {
             actualPoem3 = "actualPoem1";
         }
 
-        /**
-         Toast.makeText(ElsPoetesPopUpView.this,
-         "the values are:  " + actualPoem1
-         + "   " + actualPoem2
-         + "   " + actualPoem3, Toast.LENGTH_SHORT).show();
-         */
-
-        /*
-
-
-                     Getting actual number from poem...  ******* START *********
-
-
-         */
         //For 1st textView (First Poem);
         final int integerNumberOfFirstTextPoem = Integer.parseInt(actualPoem1.replaceAll("[\\D]", ""));
         final String firstTextPoemIs = Integer.toString(integerNumberOfFirstTextPoem);
-        final String sendFirstTextPoemIs = "Poem-" + firstTextPoemIs + ".json";
-        final String sendFirstImageNumber = "Poem-"+ firstTextPoemIs + ".jpg";
 
         //For 2nd textView (Second Poem);
         final int integerNumberOfSecondTextPoem = Integer.parseInt(actualPoem2.replaceAll("[\\D]", ""));
         final String secondTextPoemIs = Integer.toString(integerNumberOfSecondTextPoem);
-        final String sendSecondTextPoemIs = "Poem-" + secondTextPoemIs + ".json";
-        final String sendSecondImageNumber = "Poem-"+ secondTextPoemIs + ".jpg";
 
         //For 3rd textView (Third Poem);
         final int integerNumberOfThirdTextPoem = Integer.parseInt(actualPoem3.replaceAll("[\\D]", ""));
         final String thirdTextPoemIs = Integer.toString(integerNumberOfThirdTextPoem);
-        final String sendThirdTextPoemIs = "Poem-"  + thirdTextPoemIs + ".json";
-        final String sendThirdImageNumber = "Poem-" + thirdTextPoemIs + ".jpg";
-
-        //Log.d("IMAGES", "images are:" + sendFirstImageNumber + "\n" + sendSecondImageNumber + "\n" + sendThirdImageNumber);
-
-        /*
-
-
-                     Getting actual number from poem...  ******* DONE ********
-
-
-         */
 
         String imageSource = messageImage;
 
         try {
             Drawable mDrawable = MainActivity.getAssetImage(this, imageSource);
-            ImageView image1 = (ImageView) findViewById(R.id.pupUpImage);
             image1.setImageDrawable(mDrawable);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        //Log.d("poemNumbers: ", "is: " + actualPoem1 +  "   " + actualPoem2);
-
-        TextView textUpperSide1 = (TextView) findViewById(R.id.textUpperSide1);
         final Typeface face_1 = Typeface.createFromAsset(this.getAssets(), "fonts/Quattrocento Regular.ttf");
         textUpperSide1.setTypeface(face_1);
         textUpperSide1.setText(Html.fromHtml(messageData));
 
-        TextView textUpperSide2 = (TextView) findViewById(R.id.textUpperSide2);
         final Typeface face_2 = Typeface.createFromAsset(this.getAssets(), "fonts/Quattrocento Regular.ttf");
         textUpperSide2.setTypeface(face_2);
         textUpperSide2.setText(Html.fromHtml(messageText));
@@ -150,17 +128,15 @@ public class ElsPoetesPopUpView extends Activity {
          *
          */
 
-        TextView textViewActor1 = (TextView) findViewById(R.id.textView2linear1LSVRBottomBottom);
+
         final Typeface facetextViewActor1 = Typeface.createFromAsset(this.getAssets(), "fonts/Quattrocento Regular.ttf");
         textViewActor1.setTypeface(facetextViewActor1);
         textViewActor1.setText(Html.fromHtml(actor1));
 
-        TextView textViewActor2 = (TextView) findViewById(R.id.textView4linear1LSVRBottomBottom);
         final Typeface facetextViewActor2 = Typeface.createFromAsset(this.getAssets(), "fonts/Quattrocento Regular.ttf");
         textViewActor2.setTypeface(facetextViewActor2);
         textViewActor2.setText(Html.fromHtml(actor2));
 
-        TextView textViewActor3 = (TextView) findViewById(R.id.textView5linear1LSVRBottomBottom);
         final Typeface facetextViewActor3 = Typeface.createFromAsset(this.getAssets(), "fonts/Quattrocento Regular.ttf");
         textViewActor3.setTypeface(facetextViewActor3);
         textViewActor3.setText(Html.fromHtml(actor3));
@@ -171,7 +147,6 @@ public class ElsPoetesPopUpView extends Activity {
          *
          */
 
-        TextView textviewPoem1 = (TextView) findViewById(R.id.textView1linear1LSVRBottomUp); //POEM #1
         final Typeface facePoem_1 = Typeface.createFromAsset(this.getAssets(), "fonts/Quattrocento Regular.ttf");
         textviewPoem1.setTypeface(facePoem_1);
         textviewPoem1.setText(Html.fromHtml(poem1));
@@ -201,8 +176,6 @@ public class ElsPoetesPopUpView extends Activity {
             }
         });
 
-
-        TextView textviewPoem2 = (TextView) findViewById(R.id.textView3linear1LSVRBottomUp); //POEM #2
         final Typeface facePoem_2 = Typeface.createFromAsset(this.getAssets(), "fonts/Quattrocento Regular.ttf");
         textviewPoem2.setTypeface(facePoem_2);
         textviewPoem2.setText(Html.fromHtml(poem2));
@@ -229,7 +202,6 @@ public class ElsPoetesPopUpView extends Activity {
         }
         });  */
 
-        TextView textviewPoem3 = (TextView) findViewById(R.id.textView5linear1LSVRBottomUp); //POEM #3
         final Typeface facePoem_p1 = Typeface.createFromAsset(this.getAssets(), "fonts/Quattrocento Regular.ttf");
         textviewPoem3.setTypeface(facePoem_p1);
         textviewPoem3.setText(Html.fromHtml(poem3));

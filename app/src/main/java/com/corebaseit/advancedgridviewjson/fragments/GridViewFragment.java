@@ -58,7 +58,8 @@ public class GridViewFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.gridview_fragment, container, false);
+        View rootView = inflater.inflate(R.layout.gridview_fragment, container, false);
+        return rootView;
     }
 
     @Override
@@ -78,8 +79,6 @@ public class GridViewFragment extends Fragment {
         DisplayMetrics displaymetrics = new DisplayMetrics();
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
         int screenWidth = displaymetrics.widthPixels;
-        //int screenHeight = displaymetrics.heightPixels;
-
         int numColumns = (screenWidth) / (screenWidth/2);
 
         gridView.setNumColumns(numColumns);
