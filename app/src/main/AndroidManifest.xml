@@ -23,6 +23,10 @@
             android:theme="@style/NoTitleDialog"
             android:screenOrientation="portrait"/>
 
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="b32d04bceed442ea237032d1adf15109e6bdeeed" />
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
