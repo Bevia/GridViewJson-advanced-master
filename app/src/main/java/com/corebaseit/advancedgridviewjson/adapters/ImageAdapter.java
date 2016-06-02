@@ -3,6 +3,20 @@ package com.corebaseit.advancedgridviewjson.adapters;
 /**
  * Created by vincent on 10/2/16.
  * www.corebaseit.com "good android stuff coming soon...."
+ * <p/>
+ * Copyright 2013 Square, Inc.
+ * <p/>
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * <p/>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p/>
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 /**
  * Copyright 2013 Square, Inc.
@@ -50,6 +64,7 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
     private Context context;
     private List<ElsPoetesJsonDataModel> poetsList;
     private static LayoutInflater poeticaPoetsInflater = null;
+
     private static final String enContextoImage_1 = "pictures/Poet-";
     private ProgressBar progressView;
 
@@ -76,6 +91,7 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
         this.poetsList = objects;
 
         poeticaPoetsInflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
+
     }
 
     public int getCount() {
@@ -88,16 +104,26 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
 
     static class ViewHolder {
 
-        @BindView(R.id.image) ImageView imageView;
-        @BindView(R.id.textView1linear1LSVRUpUp) TextView name;
-        @BindView(R.id.textView1linear1LSVRBottomUp) TextView poem1;
-        @BindView(R.id.textView3linear1LSVRBottomUp) TextView poem2;
-        @BindView(R.id.textView5linear1LSVRBottomUp) TextView poem3;
-        @BindView(R.id.textView2linear1LSVRBottomBottom) TextView actor1;
-        @BindView(R.id.textView4linear1LSVRBottomBottom) TextView actor2;
-        @BindView(R.id.textView6linear1LSVRBottomBottom) TextView actor3;
-        @BindView(R.id.textView1linear1LSVRUpBottom) TextView bio;
-        @BindView(R.id.progressBar) ProgressBar progressBar;
+        @BindView(R.id.image)
+        ImageView imageView;
+        @BindView(R.id.textView1linear1LSVRUpUp)
+        TextView name;
+        @BindView(R.id.textView1linear1LSVRBottomUp)
+        TextView poem1;
+        @BindView(R.id.textView3linear1LSVRBottomUp)
+        TextView poem2;
+        @BindView(R.id.textView5linear1LSVRBottomUp)
+        TextView poem3;
+        @BindView(R.id.textView2linear1LSVRBottomBottom)
+        TextView actor1;
+        @BindView(R.id.textView4linear1LSVRBottomBottom)
+        TextView actor2;
+        @BindView(R.id.textView6linear1LSVRBottomBottom)
+        TextView actor3;
+        @BindView(R.id.textView1linear1LSVRUpBottom)
+        TextView bio;
+        @BindView(R.id.progressBar)
+        ProgressBar progressBar;
 
         public ViewHolder(View view) {
             ButterKnife.bind(this, view);
@@ -110,7 +136,7 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
 
         if (view != null) {
             holder = (ViewHolder) view.getTag();
-        }else {
+        } else {
 
             view = poeticaPoetsInflater.inflate(R.layout.gridview_layout, parent, false);
             holder = new ViewHolder(view);
@@ -123,7 +149,6 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
 
             ((TextView) view.findViewById(R.id.textView1linear1LSVRUpUp)).setTypeface(Typeface.
                     createFromAsset(view.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
-
 
             ((TextView) view.findViewById(R.id.textView1linear1LSVRBottomUp)).setTypeface(Typeface.
                     createFromAsset(view.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
@@ -142,10 +167,10 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
 
             ((TextView) view.findViewById(R.id.textView6linear1LSVRBottomBottom)).setTypeface(Typeface.
                     createFromAsset(view.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
-
         }
 
         final ElsPoetesJsonDataModel flower = poetsList.get(position);
+
         holder.bio.setText(Html.fromHtml(flower.getBio()));
         holder.name.setText(Html.fromHtml(flower.getName()));
         holder.poem1.setText(Html.fromHtml(flower.getNameFirstPoem()));
@@ -165,7 +190,6 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
                     public void onSuccess() {
                         progressView.setVisibility(View.GONE);
                     }
-
                     @Override
                     public void onError() {
 
@@ -174,42 +198,34 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
 
         holder.bio.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
                 datos(position);
             }
         });
 
         holder.imageView.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
                 datos(position);
             }
         });
 
         holder.poem1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
                 Toast.makeText(context, "" + flower.getName(),
                         Toast.LENGTH_SHORT).show();
-
             }
         });
 
         holder.poem2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
                 Toast.makeText(context, "" + flower.getName(),
                         Toast.LENGTH_SHORT).show();
-
             }
         });
 
         holder.poem3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
                 Toast.makeText(context, "" + flower.getName(),
                         Toast.LENGTH_SHORT).show();
-
             }
         });
 

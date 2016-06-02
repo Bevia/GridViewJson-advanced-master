@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import java.io.IOException;
 
+import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -20,41 +21,66 @@ import butterknife.ButterKnife;
  */
 public class ElsPoetesPopUpView extends Activity {
 
-    @BindView(R.id.pupUpImage) ImageView image1;
-    @BindView(R.id.textUpperSide1) TextView textUpperSide1;
-    @BindView(R.id.textUpperSide2) TextView textUpperSide2;
-    @BindView(R.id.textView2linear1LSVRBottomBottom) TextView textViewActor1;
-    @BindView(R.id.textView4linear1LSVRBottomBottom) TextView textViewActor2;
-    @BindView(R.id.textView5linear1LSVRBottomBottom) TextView textViewActor3;
-    @BindView(R.id.textView1linear1LSVRBottomUp) TextView textviewPoem1;
-    @BindView(R.id.textView3linear1LSVRBottomUp) TextView textviewPoem2;
-    @BindView(R.id.textView5linear1LSVRBottomUp) TextView textviewPoem3;
+    @BindView(R.id.pupUpImage)
+    ImageView image1;
+    @BindView(R.id.textUpperSide1)
+    TextView textUpperSide1;
+    @BindView(R.id.textUpperSide2)
+    TextView textUpperSide2;
+    @BindView(R.id.textView2linear1LSVRBottomBottom)
+    TextView textViewActor1;
+    @BindView(R.id.textView4linear1LSVRBottomBottom)
+    TextView textViewActor2;
+    @BindView(R.id.textView5linear1LSVRBottomBottom)
+    TextView textViewActor3;
+    @BindView(R.id.textView1linear1LSVRBottomUp)
+    TextView textviewPoem1;
+    @BindView(R.id.textView3linear1LSVRBottomUp)
+    TextView textviewPoem2;
+    @BindView(R.id.textView5linear1LSVRBottomUp)
+    TextView textviewPoem3;
 
-    private static final String EXTRA_PASS_JSON_DATA_TO_POPUPVIEW_1 = "DATA";
-    private static final String EXTRA_PASS_IMAGE_DATA_TO_POPUPVIEW_1 = "IMAGE";
-    private static final String EXTRA_PASS_JSON_DATA_TO_POPUPVIEW_2 = "TEXT";
-
+    @BindString(R.string.POPUPVIEW_1)
+    String EXTRA_PASS_JSON_DATA_TO_POPUPVIEW_1;
+    @BindString(R.string.IMAGE_DATA_TO_POPUPVIEW_1)
+    String EXTRA_PASS_IMAGE_DATA_TO_POPUPVIEW_1;
+    @BindString(R.string.JSON_DATA_TO_POPUPVIEW_2)
+    String EXTRA_PASS_JSON_DATA_TO_POPUPVIEW_2;
     //Pasing 3 (MAX) POEMS:
-    private static final String EXTRA_PASS_JSON_POEM_1 = "POEM1";
-    private static final String EXTRA_PASS_JSON_POEM_2 = "POEM2";
-    private static final String EXTRA_PASS_JSON_POEM_3 = "POEM3";
-
-    private static final String TAG_NUMER_OF_FIRST_POEM = "fisrt_poem";
-    private static final String TAG_NUMER_OF_SECOND_POEM = "second_poem";
-    private static final String TAG_NUMER_OF_THIRD_POEM = "third_poem";
+    @BindString(R.string.EXTRA_PASS_JSON_POEM_1)
+    String EXTRA_PASS_JSON_POEM_1;
+    @BindString(R.string.EXTRA_PASS_JSON_POEM_2)
+    String EXTRA_PASS_JSON_POEM_2;
+    @BindString(R.string.EXTRA_PASS_JSON_POEM_3)
+    String EXTRA_PASS_JSON_POEM_3;
+    @BindString(R.string.TAG_NUMER_OF_FIRST_POEM)
+    String TAG_NUMER_OF_FIRST_POEM;
+    @BindString(R.string.TAG_NUMER_OF_SECOND_POEM)
+    String TAG_NUMER_OF_SECOND_POEM;
+    @BindString(R.string.TAG_NUMER_OF_THIRD_POEM)
+    String TAG_NUMER_OF_THIRD_POEM;
     //Passing 2 (MAX) Actors
-    private static final String EXTRA_PASS_JSON_POEM_ACTOR_1 = "POEMACTOR1";
-    private static final String EXTRA_PASS_JSON_POEM_ACTOR_2 = "POEMACTOR2";
-    private static final String EXTRA_PASS_JSON_POEM_ACTOR_3 = "POEMACTOR3";
-
+    @BindString(R.string.EXTRA_PASS_JSON_POEM_ACTOR_1)
+    String EXTRA_PASS_JSON_POEM_ACTOR_1;
+    @BindString(R.string.EXTRA_PASS_JSON_POEM_ACTOR_2)
+    String EXTRA_PASS_JSON_POEM_ACTOR_2;
+    @BindString(R.string.EXTRA_PASS_JSON_POEM_ACTOR_3)
+    String EXTRA_PASS_JSON_POEM_ACTOR_3;
     //For Guided View Poem VIEW
-    private static final String EXTRA_POETS_SECTION_PASS_NAME_OF_POET = "NAME_OF_POET";
-    private static final String EXTRA_POETS_SECTION_PASS_POEM_VIDEO = "NAME_OF_POEM_VIDEO";
-    private static final String EXTRA_POETS_SECTION_PASS_JSON_NAME_POEM = "NAME_OF_POEM";
-    private static final String EXTRA_POETS_SECTION_PASS_JSON_POEM = "JSON_POEM";
-    private static final String EXTRA_POETS_SECTION_PASS_IMAGE = "READER_IMAGE";
-    private static final String EXTRA_POETS_SECTION_PASS_READER_NAME = "READER_NAME";
-    private static final String EXTRA_FROM_FRAGMENT = "FROM_FRAGMENT";
+    @BindString(R.string.EXTRA_POETS_SECTION_PASS_NAME_OF_POET)
+    String EXTRA_POETS_SECTION_PASS_NAME_OF_POET;
+    @BindString(R.string.EXTRA_POETS_SECTION_PASS_POEM_VIDEO)
+    String EXTRA_POETS_SECTION_PASS_POEM_VIDEO;
+    @BindString(R.string.EXTRA_POETS_SECTION_PASS_JSON_NAME_POEM)
+    String EXTRA_POETS_SECTION_PASS_JSON_NAME_POEM;
+    @BindString(R.string.EXTRA_POETS_SECTION_PASS_JSON_POEM)
+    String EXTRA_POETS_SECTION_PASS_JSON_POEM;
+    @BindString(R.string.EXTRA_POETS_SECTION_PASS_IMAGE)
+    String EXTRA_POETS_SECTION_PASS_IMAGE;
+    @BindString(R.string.EXTRA_POETS_SECTION_PASS_READER_NAME)
+    String EXTRA_POETS_SECTION_PASS_READER_NAME;
+    @BindString(R.string.EXTRA_FROM_FRAGMENT)
+    String EXTRA_FROM_FRAGMENT;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,15 +106,15 @@ public class ElsPoetesPopUpView extends Activity {
 
         //Actual poem number:
         String actualPoem1 = extras.getString(TAG_NUMER_OF_FIRST_POEM, "");
-        if(actualPoem1.isEmpty()||actualPoem1==null){
+        if (actualPoem1.isEmpty() || actualPoem1 == null) {
             actualPoem1 = "actualPoem1";
         }
         String actualPoem2 = extras.getString(TAG_NUMER_OF_SECOND_POEM, "");
-        if(actualPoem2.isEmpty()||actualPoem2==null){
+        if (actualPoem2.isEmpty() || actualPoem2 == null) {
             actualPoem2 = "actualPoem1";
         }
         String actualPoem3 = extras.getString(TAG_NUMER_OF_THIRD_POEM, "");
-        if(actualPoem3.isEmpty()||actualPoem3==null){
+        if (actualPoem3.isEmpty() || actualPoem3 == null) {
             actualPoem3 = "actualPoem1";
         }
 
@@ -153,7 +179,8 @@ public class ElsPoetesPopUpView extends Activity {
 
 
         textviewPoem1.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
+            @Override
+            public void onClick(View v) {
 
                 Toast.makeText(ElsPoetesPopUpView.this,
                         "pressing text....  ", Toast.LENGTH_SHORT).show();
@@ -182,8 +209,7 @@ public class ElsPoetesPopUpView extends Activity {
 
         /**
          textviewPoem2.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
+        @Override public void onClick(View v) {
 
         Intent intent = new Intent(PopUpClass.this, VideoLecturaGuiadaGuiadoDetailView.class);
         intent.putExtra(EXTRA_POETS_SECTION_PASS_NAME_OF_POET, messageData);
@@ -208,8 +234,7 @@ public class ElsPoetesPopUpView extends Activity {
 
         /**
          textviewPoem3.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
+        @Override public void onClick(View v) {
 
         Intent intent = new Intent(PopUpClass.this, VideoLecturaGuiadaGuiadoDetailView.class);
         intent.putExtra(EXTRA_POETS_SECTION_PASS_NAME_OF_POET, messageData);

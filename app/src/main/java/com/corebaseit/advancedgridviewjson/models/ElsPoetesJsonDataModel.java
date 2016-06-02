@@ -12,9 +12,11 @@ public class ElsPoetesJsonDataModel {
     private String nameFirstPoem;
     private String nameSecondtPoem;
     private String nameThirdPoem;
+
     private String nameFirstActor;
     private String nameSecondActor;
     private String nameThirdActor;
+
     private String pomeNumberOne;
     private String pomeNumberTwo;
     private String pomeNumbeThree;

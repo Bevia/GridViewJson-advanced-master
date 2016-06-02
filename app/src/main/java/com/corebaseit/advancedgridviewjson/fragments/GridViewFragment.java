@@ -24,13 +24,20 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import butterknife.BindString;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
+
 public class GridViewFragment extends Fragment {
 
     static ArrayList<ElsPoetesJsonDataModel> modelJsonPoets; //Static so that I can use it in ElsActors!
 
-    private GridView gridView;
-    ImageAdapter imageAdapter;
-    private static final String TAG_POETS_JSON = "Poets.en.json";
+    @BindView(R.id.gridView) GridView gridView;
+    private ImageAdapter imageAdapter;
+
+    @BindString(R.string.TAG_POETS_JSON) String TAG_POETS_JSON;
+
     private String TAG_ACTORS_JSON;
 
     private String TAG_NAME;
@@ -49,6 +56,7 @@ public class GridViewFragment extends Fragment {
     private String TAG_FIRST_ACTOR;
     private String TAG_SECOND_ACTOR;
     private String TAG_THIRD_ACTOR;
+    private Unbinder gridViewBinder;
 
     public GridViewFragment() {
         // Required empty public constructor
@@ -59,15 +67,18 @@ public class GridViewFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.gridview_fragment, container, false);
+        gridViewBinder = ButterKnife.bind(this, rootView);
         return rootView;
     }
 
+    /**
+     * It will throw exception if the target view can not be found. To indicate that the
+     * field may not be present in the layout, use any variant of the @Nullable annotation.
+     */
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        //My stuff:
-        //new ProgressPoetsPoemsAsyncTask().execute();
         gridView = (GridView) getActivity().findViewById(R.id.gridView);
 
         new poemaLeido().execute();
@@ -183,5 +194,10 @@ public class GridViewFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
+    }
+
+    @Override public void onDestroyView() {
+        super.onDestroyView();
+        gridViewBinder.unbind();
     }
 }

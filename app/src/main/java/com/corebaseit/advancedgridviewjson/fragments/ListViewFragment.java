@@ -33,6 +33,8 @@ public class ListViewFragment extends Fragment {
     static ArrayList<ElsPoetesJsonDataModel> modelJsonPoets; //Static so that I can use it in ElsActors!
 
     private static final String TAG_POETS_JSON = "Poets.en.json";
+
+
     private String TAG_ACTORS_JSON;
 
     private String TAG_NAME;

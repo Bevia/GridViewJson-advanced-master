@@ -26,22 +26,30 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import io.fabric.sdk.android.Fabric;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    private ViewPager viewPager;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+    @BindView(R.id.viewpager)
+    ViewPager viewPager;
+
+    /**
+     * You can use Butter Knife inject() method anywhere you would otherwise use the findViewById()
+     * method to save time and avoid code repetition when you have to instantiate the views in the layout
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        ButterKnife.bind(this);
         setSupportActionBar(toolbar);
-
-        viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
     }
 

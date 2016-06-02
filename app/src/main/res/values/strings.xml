@@ -13,19 +13,28 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
-  <!--  <string name="TAG_NUMER_OF_FIRST_POEM">fisrt_poem</string>
-    <string name="TAG_NUMER_OF_SECOND_POEM">second_poem</string>
-    <string name="TAG_NUMER_OF_THIRD_POEM">third_poem</string>
-    <string name="EXTRA_PASS_JSON_DATA_TO_POPUPVIEW_1">DATA</string>
-    <string name="EXTRA_PASS_JSON_DATA_TO_POPUPVIEW_2">TEXT</string>
-    <string name="EXTRA_PASS_IMAGE_DATA_TO_POPUPVIEW_1">IMAGE</string>
+    <string name="POPUPVIEW_1">DATA</string>
+    <string name="IMAGE_DATA_TO_POPUPVIEW_1">IMAGE</string>
+    <string name="JSON_DATA_TO_POPUPVIEW_2">TEXT</string>
     <string name="EXTRA_PASS_JSON_POEM_1">POEM1</string>
     <string name="EXTRA_PASS_JSON_POEM_2">POEM2</string>
     <string name="EXTRA_PASS_JSON_POEM_3">POEM3</string>
+    <string name="TAG_NUMER_OF_FIRST_POEM">fisrt_poem</string>
+    <string name="TAG_NUMER_OF_SECOND_POEM">second_poem</string>
+    <string name="TAG_NUMER_OF_THIRD_POEM">third_poem</string>
     <string name="EXTRA_PASS_JSON_POEM_ACTOR_1">POEMACTOR1</string>
     <string name="EXTRA_PASS_JSON_POEM_ACTOR_2">POEMACTOR2</string>
     <string name="EXTRA_PASS_JSON_POEM_ACTOR_3">POEMACTOR3</string>
--->
+    <string name="EXTRA_POETS_SECTION_PASS_NAME_OF_POET">NAME_OF_POET</string>
+    <string name="EXTRA_POETS_SECTION_PASS_POEM_VIDEO">NAME_OF_POEM_VIDEO</string>
+    <string name="EXTRA_POETS_SECTION_PASS_JSON_NAME_POEM">NAME_OF_POEM</string>
+    <string name="EXTRA_POETS_SECTION_PASS_JSON_POEM">JSON_POEM</string>
+    <string name="EXTRA_POETS_SECTION_PASS_IMAGE">READER_IMAGE</string>
+    <string name="EXTRA_POETS_SECTION_PASS_READER_NAME">READER_NAME</string>
+    <string name="EXTRA_FROM_FRAGMENT">FROM_FRAGMENT</string>
+    <string name="TAG_POETS_JSON">Poets.en.json</string>
+    <string name="EXTRA_PASS_JSON_DATA_TO_POPUPVIEW_1">DATA</string>
+    <string name="EXTRA_PASS_JSON_DATA_TO_POPUPVIEW_2">TEXT</string>
+    <string name="EXTRA_PASS_IMAGE_DATA_TO_POPUPVIEW_1">IMAGE</string>
 
 </resources>
