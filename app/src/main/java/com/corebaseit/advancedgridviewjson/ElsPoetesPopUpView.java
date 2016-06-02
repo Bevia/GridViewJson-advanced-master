@@ -103,10 +103,8 @@ public class ElsPoetesPopUpView extends Activity {
         final String actor2 = extras.getString(EXTRA_PASS_JSON_POEM_ACTOR_2, ""); // Actor2 o poeta2  texto
         final String actor3 = extras.getString(EXTRA_PASS_JSON_POEM_ACTOR_3, ""); // Actor2 o poeta2  texto
 
-        String imageSource = messageImage;
-
         try {
-            Drawable mDrawable = MainActivity.getAssetImage(this, imageSource);
+            Drawable mDrawable = MainActivity.getAssetImage(this, messageImage);
             image1.setImageDrawable(mDrawable);
         } catch (IOException e) {
             e.printStackTrace();

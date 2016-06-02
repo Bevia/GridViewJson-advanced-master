@@ -97,7 +97,8 @@
                         android:background="@null"
                         android:textColor="@color/Black"
                         android:text="testing new adapter #1"
-                        android:textSize="11sp" />
+                        android:textSize="11sp"
+                        android:onClick="click01"/>
 
                 </LinearLayout>
 

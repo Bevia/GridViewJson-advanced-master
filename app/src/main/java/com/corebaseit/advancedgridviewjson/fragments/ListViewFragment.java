@@ -34,9 +34,6 @@ public class ListViewFragment extends Fragment {
 
     private static final String TAG_POETS_JSON = "Poets.en.json";
 
-
-    private String TAG_ACTORS_JSON;
-
     private String TAG_NAME;
     private String TAG_BIO;
     private String TAG_BIO_EXTENDED;
@@ -55,6 +52,7 @@ public class ListViewFragment extends Fragment {
     private String TAG_THIRD_ACTOR;
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
+    private RecycleAdapter newadapter;
 
     public ListViewFragment() {
     }
@@ -134,7 +132,7 @@ public class ListViewFragment extends Fragment {
         protected void onPostExecute(ArrayList<HashMap<String, String>> result) {
             super.onPostExecute(result);
 
-            RecycleAdapter newadapter = new RecycleAdapter(getActivity(), modelJsonPoets);
+            newadapter = new RecycleAdapter(getActivity(), modelJsonPoets);
             recyclerView.setAdapter(newadapter);
 
             newadapter.setOnItemClickListener(new RecycleAdapter.OnItemClickListener() {
@@ -149,7 +147,7 @@ public class ListViewFragment extends Fragment {
     }
 
     public String loadJSONPoemFromAsset(String jsonName) {
-        String json = null;
+        String json;
         try {
             InputStream is = getActivity().getAssets().open(jsonName);
             int size = is.available();
