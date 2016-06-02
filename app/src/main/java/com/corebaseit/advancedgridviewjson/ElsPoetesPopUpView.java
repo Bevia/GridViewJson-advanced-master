@@ -5,7 +5,6 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.Html;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,6 +14,7 @@ import java.io.IOException;
 import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by vincent on 10/2/16.
@@ -103,33 +103,6 @@ public class ElsPoetesPopUpView extends Activity {
         final String actor2 = extras.getString(EXTRA_PASS_JSON_POEM_ACTOR_2, ""); // Actor2 o poeta2  texto
         final String actor3 = extras.getString(EXTRA_PASS_JSON_POEM_ACTOR_3, ""); // Actor2 o poeta2  texto
 
-
-        //Actual poem number:
-        String actualPoem1 = extras.getString(TAG_NUMER_OF_FIRST_POEM, "");
-        if (actualPoem1.isEmpty() || actualPoem1 == null) {
-            actualPoem1 = "actualPoem1";
-        }
-        String actualPoem2 = extras.getString(TAG_NUMER_OF_SECOND_POEM, "");
-        if (actualPoem2.isEmpty() || actualPoem2 == null) {
-            actualPoem2 = "actualPoem1";
-        }
-        String actualPoem3 = extras.getString(TAG_NUMER_OF_THIRD_POEM, "");
-        if (actualPoem3.isEmpty() || actualPoem3 == null) {
-            actualPoem3 = "actualPoem1";
-        }
-
-        //For 1st textView (First Poem);
-        final int integerNumberOfFirstTextPoem = Integer.parseInt(actualPoem1.replaceAll("[\\D]", ""));
-        final String firstTextPoemIs = Integer.toString(integerNumberOfFirstTextPoem);
-
-        //For 2nd textView (Second Poem);
-        final int integerNumberOfSecondTextPoem = Integer.parseInt(actualPoem2.replaceAll("[\\D]", ""));
-        final String secondTextPoemIs = Integer.toString(integerNumberOfSecondTextPoem);
-
-        //For 3rd textView (Third Poem);
-        final int integerNumberOfThirdTextPoem = Integer.parseInt(actualPoem3.replaceAll("[\\D]", ""));
-        final String thirdTextPoemIs = Integer.toString(integerNumberOfThirdTextPoem);
-
         String imageSource = messageImage;
 
         try {
@@ -177,79 +150,36 @@ public class ElsPoetesPopUpView extends Activity {
         textviewPoem1.setTypeface(facePoem_1);
         textviewPoem1.setText(Html.fromHtml(poem1));
 
-
-        textviewPoem1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Toast.makeText(ElsPoetesPopUpView.this,
-                        "pressing text....  ", Toast.LENGTH_SHORT).show();
-
-                /**
-                 Intent intent = new Intent(PopUpClass.this, VideoLecturaGuiadaGuiadoDetailView.class);
-                 intent.putExtra(EXTRA_POETS_SECTION_PASS_NAME_OF_POET, messageData);
-                 intent.putExtra(EXTRA_POETS_SECTION_PASS_POEM_VIDEO, actualPoem1);
-                 intent.putExtra(EXTRA_POETS_SECTION_PASS_JSON_NAME_POEM, poem1);
-                 intent.putExtra(EXTRA_POETS_SECTION_PASS_JSON_POEM, sendFirstTextPoemIs);
-                 intent.putExtra(EXTRA_POETS_SECTION_PASS_IMAGE, sendFirstImageNumber);
-                 intent.putExtra(EXTRA_POETS_SECTION_PASS_READER_NAME, actor1);
-                 intent.putExtra(EXTRA_FROM_FRAGMENT, "FROM_FRAGMENT");
-
-                 //Log.d("IMAGES", "images are:" + sendFirstImageNumber);
-
-                 startActivity(intent);
-                 */
-
-            }
-        });
-
         final Typeface facePoem_2 = Typeface.createFromAsset(this.getAssets(), "fonts/Quattrocento Regular.ttf");
         textviewPoem2.setTypeface(facePoem_2);
         textviewPoem2.setText(Html.fromHtml(poem2));
 
-        /**
-         textviewPoem2.setOnClickListener(new View.OnClickListener() {
-        @Override public void onClick(View v) {
-
-        Intent intent = new Intent(PopUpClass.this, VideoLecturaGuiadaGuiadoDetailView.class);
-        intent.putExtra(EXTRA_POETS_SECTION_PASS_NAME_OF_POET, messageData);
-        intent.putExtra(EXTRA_POETS_SECTION_PASS_POEM_VIDEO, actualPoem2);
-        intent.putExtra(EXTRA_POETS_SECTION_PASS_JSON_NAME_POEM, poem2);
-        intent.putExtra(EXTRA_POETS_SECTION_PASS_JSON_POEM, sendSecondTextPoemIs);
-        intent.putExtra(EXTRA_POETS_SECTION_PASS_IMAGE, sendSecondImageNumber);
-        intent.putExtra(EXTRA_POETS_SECTION_PASS_READER_NAME, actor2);
-        intent.putExtra(EXTRA_FROM_FRAGMENT, "FROM_FRAGMENT");
-
-
-        //Log.d("IMAGES", "images are:" + sendSecondImageNumber);
-
-        startActivity(intent);
-
-        }
-        });  */
-
         final Typeface facePoem_p1 = Typeface.createFromAsset(this.getAssets(), "fonts/Quattrocento Regular.ttf");
         textviewPoem3.setTypeface(facePoem_p1);
         textviewPoem3.setText(Html.fromHtml(poem3));
+    }
 
-        /**
-         textviewPoem3.setOnClickListener(new View.OnClickListener() {
-        @Override public void onClick(View v) {
+    @OnClick(R.id.textView1linear1LSVRBottomUp)
+    public void click1() {
+        // TODO Click text
 
-        Intent intent = new Intent(PopUpClass.this, VideoLecturaGuiadaGuiadoDetailView.class);
-        intent.putExtra(EXTRA_POETS_SECTION_PASS_NAME_OF_POET, messageData);
-        intent.putExtra(EXTRA_POETS_SECTION_PASS_POEM_VIDEO, actualPoem3);
-        intent.putExtra(EXTRA_POETS_SECTION_PASS_JSON_NAME_POEM, poem3);
-        intent.putExtra(EXTRA_POETS_SECTION_PASS_JSON_POEM, sendThirdTextPoemIs);
-        intent.putExtra(EXTRA_POETS_SECTION_PASS_IMAGE, sendThirdImageNumber);
-        intent.putExtra(EXTRA_POETS_SECTION_PASS_READER_NAME, actor3);
-        intent.putExtra(EXTRA_FROM_FRAGMENT, "FROM_FRAGMENT");
+        Toast.makeText(ElsPoetesPopUpView.this,
+                "pressing text....1  ", Toast.LENGTH_SHORT).show();
+    }
 
-        //Log.d("IMAGES", "images are:" + sendThirdImageNumber);
+    @OnClick(R.id.textView3linear1LSVRBottomUp)
+    public void click2() {
+        // TODO Click text
 
-        startActivity(intent);
-        }
-        });
-         */
+        Toast.makeText(ElsPoetesPopUpView.this,
+                "pressing text....2  ", Toast.LENGTH_SHORT).show();
+    }
+
+    @OnClick(R.id.textView5linear1LSVRBottomUp)
+    public void click3() {
+        // TODO Click text
+
+        Toast.makeText(ElsPoetesPopUpView.this,
+                "pressing text....3  ", Toast.LENGTH_SHORT).show();
     }
 }

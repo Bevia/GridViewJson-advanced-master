@@ -125,7 +125,8 @@
                             android:gravity="bottom"
                             android:textColor="@color/blue_stone"
                             android:text="testing new adapter #1"
-                            android:textSize="10sp" />
+                            android:textSize="10sp"
+                            android:onClick="click1"/>
 
                         <TextView
                             android:id="@+id/textView2linear1LSVRBottomBottom"
@@ -168,7 +169,8 @@
                             android:textColor="@color/Black"
                             android:text="testing new adapter #1"
                             android:layout_below="@+id/textView3linear1LSVRBottomUp"
-                            android:textSize="10sp" />
+                            android:textSize="10sp"
+                            android:onClick="click2"/>
 
                         <TextView
                             android:id="@+id/textView5linear1LSVRBottomUp"
@@ -197,7 +199,8 @@
                             android:textColor="@color/Black"
                             android:text="testing new adapter #1"
                             android:layout_below="@+id/textView5linear1LSVRBottomUp"
-                            android:textSize="10sp" />
+                            android:textSize="10sp"
+                            android:onClick="click3"/>
 
                     </RelativeLayout>
                 </LinearLayout>
