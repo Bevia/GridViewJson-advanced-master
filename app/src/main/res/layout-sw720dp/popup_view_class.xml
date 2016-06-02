@@ -100,7 +100,8 @@
                         android:background="@null"
                         android:gravity="bottom"
                         android:textColor="@color/blue_stone"
-                        android:textSize="15sp" />
+                        android:textSize="15sp"
+                        android:onClick="click1"/>
 
                     <TextView
                         android:id="@+id/textView2linear1LSVRBottomBottom"
@@ -125,7 +126,8 @@
                         android:background="@null"
                         android:gravity="bottom"
                         android:textColor="@color/blue_stone"
-                        android:textSize="15sp" />
+                        android:textSize="15sp"
+                        android:onClick="click2"/>
 
                     <TextView
                         android:id="@+id/textView4linear1LSVRBottomBottom"
@@ -150,7 +152,8 @@
                         android:background="@null"
                         android:gravity="bottom"
                         android:textColor="@color/blue_stone"
-                        android:textSize="15sp" />
+                        android:textSize="15sp"
+                        android:onClick="click3"/>
 
                     <TextView
                         android:id="@+id/textView5linear1LSVRBottomBottom"

@@ -11,10 +11,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.corebaseit.advancedgridviewjson.R;
 import com.corebaseit.advancedgridviewjson.models.ElsPoetesJsonDataModel;
-import com.squareup.picasso.Callback;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,21 +73,11 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.MyViewHo
         holder.name.setText(Html.fromHtml(flower.getName()));
 
         //progressView.setVisibility(View.VISIBLE);
-        Picasso.with(context)
+        Glide.with(context)
                 .load("file:///android_asset/"
                         + enContextoImage_1 + flower.getNumber()
                         + "-Menu@2x.jpg")
-                .into(holder.imageView, new Callback() {
-                    @Override
-                    public void onSuccess() {
-                       //you can set your progress indicator to stop here ;)
-                    }
-
-                    @Override
-                    public void onError() {
-                        //notify whatever error ;)
-                    }
-                });
+                .into(holder.imageView);
     }
 
     @Override

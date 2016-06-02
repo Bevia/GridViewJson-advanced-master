@@ -44,15 +44,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.corebaseit.advancedgridviewjson.ElsPoetesPopUpView;
 import com.corebaseit.advancedgridviewjson.R;
 import com.corebaseit.advancedgridviewjson.models.ElsPoetesJsonDataModel;
-import com.squareup.picasso.Callback;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -66,7 +64,6 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
     private static LayoutInflater poeticaPoetsInflater = null;
 
     private static final String enContextoImage_1 = "pictures/Poet-";
-    private ProgressBar progressView;
 
     private static final String TAG_NUMER_OF_FIRST_POEM = "fisrt_poem";
     private static final String TAG_NUMER_OF_SECOND_POEM = "second_poem";
@@ -122,8 +119,6 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
         TextView actor3;
         @BindView(R.id.textView1linear1LSVRUpBottom)
         TextView bio;
-        @BindView(R.id.progressBar)
-        ProgressBar progressBar;
 
         public ViewHolder(View view) {
             ButterKnife.bind(this, view);
@@ -141,8 +136,6 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
             view = poeticaPoetsInflater.inflate(R.layout.gridview_layout, parent, false);
             holder = new ViewHolder(view);
             view.setTag(holder);
-
-            progressView = holder.progressBar;
 
             ((TextView) view.findViewById(R.id.textView1linear1LSVRUpBottom)).setTypeface(Typeface.
                     createFromAsset(view.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
@@ -180,21 +173,13 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
         holder.actor2.setText(Html.fromHtml(flower.getNameSecondActor()));
         holder.actor3.setText(Html.fromHtml(flower.getNameThirdActor()));
 
-        progressView.setVisibility(View.VISIBLE);
-        Picasso.with(context)
+        //progressView.setVisibility(View.VISIBLE);
+        Glide.with(context)
                 .load("file:///android_asset/"
                         + enContextoImage_1 + flower.getNumber()
                         + "-Menu@2x.jpg")
-                .into(holder.imageView, new Callback() {
-                    @Override
-                    public void onSuccess() {
-                        progressView.setVisibility(View.GONE);
-                    }
-                    @Override
-                    public void onError() {
-
-                    }
-                });
+                .fitCenter()
+                .into(holder.imageView);
 
         holder.bio.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

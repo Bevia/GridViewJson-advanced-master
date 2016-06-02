@@ -164,7 +164,7 @@ public class GridViewFragment extends Fragment {
     }
 
     public String loadJSONPoemFromAsset(String jsonName) {
-        String json = null;
+        String json;
         try {
             InputStream is = getActivity().getAssets().open(jsonName);
             int size = is.available();
