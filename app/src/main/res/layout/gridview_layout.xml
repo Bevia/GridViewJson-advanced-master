@@ -1,6 +1,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
 
@@ -28,6 +29,68 @@
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"
                     android:background="@color/darkgrey">
+
+                    <!--
+
+                  INDICATORS FOR AVLoadingIndicatorView:
+Row 1
+
+  BallPulse
+  BallGridPulse
+  BallClipRotate
+  BallClipRotatePulse
+
+Row 2
+
+  SquareSpin
+  BallClipRotateMultiple
+  BallPulseRise
+  BallRotate
+
+Row 3
+
+  CubeTransition
+  BallZigZag
+  BallZigZagDeflect
+  BallTrianglePath
+
+Row 4
+
+  BallScale
+  LineScale
+  LineScaleParty
+  BallScaleMultiple
+
+Row 5
+
+  BallPulseSync
+  BallBeat
+  LineScalePulseOut
+  LineScalePulseOutRapid
+
+Row 6
+
+  BallScaleRipple
+  BallScaleRippleMultiple
+  BallSpinFadeLoader
+  LineSpinFadeLoader
+
+Row 7
+
+  TriangleSkewSpin
+  Pacman
+  BallGridBeat
+  SemiCircleSpin
+                  -->
+
+                     <com.wang.avi.AVLoadingIndicatorView
+                         android:id="@+id/myProgress"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:visibility="visible"
+                         app:indicator="BallBeat"
+                         android:layout_centerInParent="true"
+                         app:indicator_color="@color/whitesmoke" />
 
                     <ImageView
                         android:id="@+id/image"
