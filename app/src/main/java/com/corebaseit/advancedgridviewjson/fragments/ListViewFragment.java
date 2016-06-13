@@ -2,17 +2,20 @@ package com.corebaseit.advancedgridviewjson.fragments;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.corebaseit.advancedgridviewjson.ListDetailActivity;
 import com.corebaseit.advancedgridviewjson.R;
 import com.corebaseit.advancedgridviewjson.adapters.RecycleAdapter;
 import com.corebaseit.advancedgridviewjson.models.ElsPoetesJsonDataModel;
@@ -141,6 +144,17 @@ public class ListViewFragment extends Fragment {
 
                     Toast.makeText(getActivity(), " from fragment... "
                             + modelJsonPoets.get(position).getName(), Toast.LENGTH_SHORT).show();
+
+                    Log.d("EXTRAS", "image: " + modelJsonPoets.get(position).getNumber());
+
+                    String numberOfImage = String.valueOf(modelJsonPoets.get(position).getNumber());
+
+                    Intent i = new Intent (getActivity(), ListDetailActivity.class);
+                    i.putExtra("imagePath", numberOfImage);
+                    i.putExtra("textBelowImage", modelJsonPoets.get(position).getName());
+                    i.putExtra("textBio", modelJsonPoets.get(position).getBioExtended());
+                    startActivity(i);
+
                 }
             });
         }

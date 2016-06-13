@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.corebaseit.advancedgridviewjson">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme">
         <activity
-            android:name="com.corebaseit.advancedgridviewjson.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -18,15 +20,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="com.corebaseit.advancedgridviewjson.ElsPoetesPopUpView"
-            android:theme="@style/NoTitleDialog"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ElsPoetesPopUpView"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleDialog" />
 
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="b32d04bceed442ea237032d1adf15109e6bdeeed" />
+
+        <activity android:name=".ListDetailActivity"></activity>
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
