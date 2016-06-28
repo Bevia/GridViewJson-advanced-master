@@ -55,4 +55,10 @@ dependencies {
         transitive = true;
     }
 
+    // [START gms_compile]
+    compile 'com.google.android.gms:play-services-analytics:9.0.0'
+    // [END gms_compile]
+
 }
+
+apply plugin: 'com.google.gms.google-services'

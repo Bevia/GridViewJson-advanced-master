@@ -12,9 +12,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
 
+import com.corebaseit.advancedgridviewjson.AnalyticsApplication;
 import com.corebaseit.advancedgridviewjson.R;
 import com.corebaseit.advancedgridviewjson.adapters.ImageAdapter;
 import com.corebaseit.advancedgridviewjson.models.ElsPoetesJsonDataModel;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
@@ -32,6 +35,11 @@ import butterknife.Unbinder;
 public class GridViewFragment extends Fragment {
 
     static ArrayList<ElsPoetesJsonDataModel> modelJsonPoets; //Static so that I can use it in ElsActors!
+
+    /**
+     * The {@link Tracker} used to record screen views.
+     */
+    private Tracker mTracker;
 
     @BindView(R.id.gridView) GridView gridView;
     private ImageAdapter imageAdapter;
@@ -63,6 +71,16 @@ public class GridViewFragment extends Fragment {
     }
 
     @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        // Obtain the shared Tracker instance.
+        AnalyticsApplication application = (AnalyticsApplication) getActivity().getApplication();
+        mTracker = application.getDefaultTracker();
+    }
+
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
@@ -80,6 +98,13 @@ public class GridViewFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         gridView = (GridView) getActivity().findViewById(R.id.gridView);
+
+        // [START custom_event]
+        mTracker.send(new HitBuilders.EventBuilder()
+                .setCategory("Action")
+                .setAction("Gridview VIEW")
+                .build());
+        // [END custom_event]
 
         new poemaLeido().execute();
 
