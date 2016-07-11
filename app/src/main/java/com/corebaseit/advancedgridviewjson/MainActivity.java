@@ -59,7 +59,10 @@ public class MainActivity extends AppCompatActivity {
         Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("  My Poets App");
+
         setupViewPager(viewPager);
 
         UUID.randomUUID();
