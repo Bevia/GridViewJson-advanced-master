@@ -11,10 +11,10 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="6dp"
+    android:layout_margin="1dp"
     card_view:cardBackgroundColor="@color/textColorPrimary"
-    card_view:cardElevation="10dp"
-    card_view:cardCornerRadius="6dp">
+    card_view:cardElevation="6dp"
+    card_view:cardCornerRadius="4dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
