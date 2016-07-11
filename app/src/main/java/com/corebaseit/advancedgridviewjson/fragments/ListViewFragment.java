@@ -13,7 +13,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.corebaseit.advancedgridviewjson.ListDetailActivity;
 import com.corebaseit.advancedgridviewjson.R;
@@ -142,9 +141,9 @@ public class ListViewFragment extends Fragment {
                 @Override
                 public void onItemClick(View view, int position) {
 
-                    Toast.makeText(getActivity(), " from fragment... "
+                  /*  Toast.makeText(getActivity(), " from fragment... "
                             + modelJsonPoets.get(position).getName(), Toast.LENGTH_SHORT).show();
-
+                    */
                     Log.d("EXTRAS", "image: " + modelJsonPoets.get(position).getNumber());
 
                     String numberOfImage = String.valueOf(modelJsonPoets.get(position).getNumber());
