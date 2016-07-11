@@ -8,7 +8,7 @@
     <LinearLayout
         android:id="@+id/horizontal1Forlinear1"
         android:orientation="horizontal"
-        android:layout_height="350dp"
+        android:layout_height="250dp"
         android:layout_width="match_parent">
 
         <LinearLayout
@@ -110,7 +110,7 @@ Row 7
 
                 <LinearLayout
                     android:id="@+id/linear1LSVRUp"
-                    android:layout_weight="0.09"
+                    android:layout_weight="0.12"
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"
                     android:background="@color/silver"
@@ -146,7 +146,7 @@ Row 7
                         android:paddingLeft="2dp"
                         android:paddingRight="2dp"
                         android:paddingTop="0dp"
-                        android:maxLines="18"
+                        android:maxLines="13"
                         android:ellipsize="end"
                         android:background="@null"
                         android:textColor="@color/Black"

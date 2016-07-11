@@ -1,6 +1,6 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="340dp"
-    android:layout_width="290dp"
+    android:layout_width="310dp"
     android:background="@null"
     android:orientation="vertical">
 
@@ -61,7 +61,7 @@
                         android:background="@null"
                         android:gravity="center_vertical"
                         android:textColor="@color/Black"
-                        android:textSize="12sp" />
+                        android:textSize="14sp" />
 
                     <!-- android:gravity="center_vertical|center_horizontal" -->
 
@@ -72,13 +72,13 @@
                         android:layout_gravity="top"
                         android:layout_marginTop="4dp"
                         android:layout_marginBottom="2dp"
-                        android:maxLines="15"
+                        android:maxLines="16"
                         android:ellipsize="end"
                         android:paddingLeft="2dp"
                         android:paddingRight="2dp"
                         android:background="@null"
                         android:textColor="@color/Black"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
