@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -17,6 +18,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.corebaseit.advancedgridviewjson.fragments.FavoritesGrid;
 import com.corebaseit.advancedgridviewjson.fragments.GridViewFragment;
 import com.corebaseit.advancedgridviewjson.fragments.ListViewFragment;
 import com.crashlytics.android.Crashlytics;
@@ -41,8 +43,12 @@ public class MainActivity extends AppCompatActivity {
      */
     private Tracker mTracker;
 
+    @BindView(R.id.tabs)
+    TabLayout tabLayout;
+
     @BindView(R.id.toolbar)
     Toolbar toolbar;
+
     @BindView(R.id.viewpager)
     ViewPager viewPager;
 
@@ -61,9 +67,13 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("  My Poets App");
+        getSupportActionBar().setTitle(getString(R.string.myTitle));
+        getSupportActionBar().setSubtitle(getString(R.string.poemsfromspain));
 
         setupViewPager(viewPager);
+        //keep the three Fragments in memory!
+        viewPager.setOffscreenPageLimit(3);
+        tabLayout.setupWithViewPager(viewPager);
 
         UUID.randomUUID();
 
@@ -91,8 +101,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFrag(new GridViewFragment(), "Imágenes");
-        adapter.addFrag(new ListViewFragment(), "Details");
+        adapter.addFrag(new GridViewFragment(), "Crid View");
+        adapter.addFrag(new ListViewFragment(), "List View");
+        adapter.addFrag(new FavoritesGrid(), "Favorites View");
         viewPager.setAdapter(adapter);
     }
 

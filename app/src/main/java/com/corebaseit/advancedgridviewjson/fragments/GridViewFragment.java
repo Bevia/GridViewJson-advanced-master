@@ -3,6 +3,7 @@ package com.corebaseit.advancedgridviewjson.fragments;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -79,7 +80,6 @@ public class GridViewFragment extends Fragment {
         mTracker = application.getDefaultTracker();
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -98,6 +98,13 @@ public class GridViewFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         gridView = (GridView) getActivity().findViewById(R.id.gridView);
+
+        /**
+         * Gridview showing/hiding toolbar:
+         */
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            gridView.setNestedScrollingEnabled(true);
+        }
 
         // [START custom_event]
         mTracker.send(new HitBuilders.EventBuilder()

@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * Created by vbevia on 14/05/16.
  */
-public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.MyViewHolder> {
+public class ListRecycleAdapter extends RecyclerView.Adapter<ListRecycleAdapter.MyViewHolder> {
 
     LayoutInflater inflater;
     private Context context;
@@ -48,7 +48,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.MyViewHo
      * get listener ready for fragment-------> END
      */
 
-    public RecycleAdapter(FragmentActivity context, ArrayList<ElsPoetesJsonDataModel> modelJsonPoets) {
+    public ListRecycleAdapter(FragmentActivity context, ArrayList<ElsPoetesJsonDataModel> modelJsonPoets) {
         this.context = context;
         this.poetsList = modelJsonPoets;
         inflater = LayoutInflater.from(context);

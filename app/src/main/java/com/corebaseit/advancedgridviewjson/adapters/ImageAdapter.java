@@ -29,7 +29,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -103,10 +102,10 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
         @BindView(R.id.textView4linear1LSVRBottomBottom) TextView actor2;
         @BindView(R.id.textView6linear1LSVRBottomBottom) TextView actor3;
         @BindView(R.id.textView1linear1LSVRUpBottom) TextView bio;
-       // @BindView(R.id.progressBar) ProgressBar progressBar;
+        // @BindView(R.id.progressBar) ProgressBar progressBar;
 
         public ViewHolder(View view) {
-           ButterKnife.bind(this, view);
+            ButterKnife.bind(this, view);
         }
     }
 
@@ -124,42 +123,42 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
 
             holder.myIndicator = (AVLoadingIndicatorView)view.findViewById(R.id.myProgress);
 
-            ((TextView) view.findViewById(R.id.textView1linear1LSVRUpBottom)).setTypeface(Typeface.
-                    createFromAsset(view.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
+            holder.bio.setTypeface(Typeface.createFromAsset(view.getContext().getAssets(),
+                    "fonts/Quattrocento Regular.ttf"));
 
-            ((TextView) view.findViewById(R.id.textView1linear1LSVRUpUp)).setTypeface(Typeface.
-                    createFromAsset(view.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
+            holder.name.setTypeface(Typeface.createFromAsset(view.getContext().getAssets(),
+                    "fonts/Quattrocento Regular.ttf"));
 
+            holder.poem1.setTypeface(Typeface.createFromAsset(view.getContext().getAssets(),
+                    "fonts/Quattrocento Regular.ttf"));
 
-            ((TextView) view.findViewById(R.id.textView1linear1LSVRBottomUp)).setTypeface(Typeface.
-                    createFromAsset(view.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
+            holder.poem2.setTypeface(Typeface.createFromAsset(view.getContext().getAssets(),
+                    "fonts/Quattrocento Regular.ttf"));
 
-            ((TextView) view.findViewById(R.id.textView3linear1LSVRBottomUp)).setTypeface(Typeface.
-                    createFromAsset(view.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
+            holder.poem3.setTypeface(Typeface.createFromAsset(view.getContext().getAssets(),
+                    "fonts/Quattrocento Regular.ttf"));
 
-            ((TextView) view.findViewById(R.id.textView5linear1LSVRBottomUp)).setTypeface(Typeface.
-                    createFromAsset(view.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
+            holder.actor1.setTypeface(Typeface.createFromAsset(view.getContext().getAssets(),
+                    "fonts/Quattrocento Regular.ttf"));
 
-            ((TextView) view.findViewById(R.id.textView2linear1LSVRBottomBottom)).setTypeface(Typeface.
-                    createFromAsset(view.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
+            holder.actor2.setTypeface(Typeface.createFromAsset(view.getContext().getAssets(),
+                    "fonts/Quattrocento Regular.ttf"));
 
-            ((TextView) view.findViewById(R.id.textView4linear1LSVRBottomBottom)).setTypeface(Typeface.
-                    createFromAsset(view.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
-
-            ((TextView) view.findViewById(R.id.textView6linear1LSVRBottomBottom)).setTypeface(Typeface.
-                    createFromAsset(view.getContext().getAssets(), "fonts/Quattrocento Regular.ttf"));
+            holder.actor3.setTypeface(Typeface.createFromAsset(view.getContext().getAssets(),
+                    "fonts/Quattrocento Regular.ttf"));
 
         }
 
         final ElsPoetesJsonDataModel flower = poetsList.get(position);
-        holder.bio.setText(Html.fromHtml(flower.getBio()));
-        holder.name.setText(Html.fromHtml(flower.getName()));
-        holder.poem1.setText(Html.fromHtml(flower.getNameFirstPoem()));
-        holder.poem2.setText(Html.fromHtml(flower.getNameSecondtPoem()));
-        holder.poem3.setText(Html.fromHtml(flower.getNameThirdPoem()));
-        holder.actor1.setText(Html.fromHtml(flower.getNameFirstActor()));
-        holder.actor2.setText(Html.fromHtml(flower.getNameSecondActor()));
-        holder.actor3.setText(Html.fromHtml(flower.getNameThirdActor()));
+
+        holder.bio.setText(flower.getBio());
+        holder.name.setText(flower.getName());
+        holder.poem1.setText(flower.getNameFirstPoem());
+        holder.poem2.setText(flower.getNameSecondtPoem());
+        holder.poem3.setText(flower.getNameThirdPoem());
+        holder.actor1.setText(flower.getNameFirstActor());
+        holder.actor2.setText(flower.getNameSecondActor());
+        holder.actor3.setText(flower.getNameThirdActor());
 
         //progressView.setVisibility(View.VISIBLE);
         Glide.with(context)

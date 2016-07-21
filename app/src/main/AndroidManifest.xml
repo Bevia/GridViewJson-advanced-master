@@ -33,7 +33,8 @@
             android:name="io.fabric.ApiKey"
             android:value="b32d04bceed442ea237032d1adf15109e6bdeeed" />
 
-        <activity android:name=".ListDetailActivity"></activity>
+        <activity android:name=".ListDetailActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

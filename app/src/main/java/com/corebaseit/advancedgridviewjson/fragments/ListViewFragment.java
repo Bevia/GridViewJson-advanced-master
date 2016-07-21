@@ -16,7 +16,7 @@ import android.view.ViewGroup;
 
 import com.corebaseit.advancedgridviewjson.ListDetailActivity;
 import com.corebaseit.advancedgridviewjson.R;
-import com.corebaseit.advancedgridviewjson.adapters.RecycleAdapter;
+import com.corebaseit.advancedgridviewjson.adapters.ListRecycleAdapter;
 import com.corebaseit.advancedgridviewjson.models.ElsPoetesJsonDataModel;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -54,7 +54,7 @@ public class ListViewFragment extends Fragment {
     private String TAG_THIRD_ACTOR;
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
-    private RecycleAdapter newadapter;
+    private ListRecycleAdapter newadapter;
 
     public ListViewFragment() {
     }
@@ -134,10 +134,10 @@ public class ListViewFragment extends Fragment {
         protected void onPostExecute(ArrayList<HashMap<String, String>> result) {
             super.onPostExecute(result);
 
-            newadapter = new RecycleAdapter(getActivity(), modelJsonPoets);
+            newadapter = new ListRecycleAdapter(getActivity(), modelJsonPoets);
             recyclerView.setAdapter(newadapter);
 
-            newadapter.setOnItemClickListener(new RecycleAdapter.OnItemClickListener() {
+            newadapter.setOnItemClickListener(new ListRecycleAdapter.OnItemClickListener() {
                 @Override
                 public void onItemClick(View view, int position) {
 

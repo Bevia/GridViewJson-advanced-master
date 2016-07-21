@@ -12,7 +12,7 @@
     <string name="staggered_view_vertical">Staggered View Vertical</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Coming soon....</string>
     <string name="POPUPVIEW_1">DATA</string>
     <string name="IMAGE_DATA_TO_POPUPVIEW_1">IMAGE</string>
     <string name="JSON_DATA_TO_POPUPVIEW_2">TEXT</string>
@@ -37,5 +37,7 @@
     <string name="EXTRA_PASS_JSON_DATA_TO_POPUPVIEW_2">TEXT</string>
     <string name="EXTRA_PASS_IMAGE_DATA_TO_POPUPVIEW_1">IMAGE</string>
     <string name="sharing">Social Sharing</string>
+    <string name="poemsfromspain">"     Poems from Spain"</string>
+    <string name="myTitle">My Poets App</string>
 
 </resources>
