@@ -216,18 +216,7 @@ public class GridViewFragment extends Fragment {
         super.onResume();
         refreshGridView();
     }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-    }
-
+    
     @Override public void onDestroyView() {
         super.onDestroyView();
         gridViewBinder.unbind();
