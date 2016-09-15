@@ -10,6 +10,7 @@
     <string name="grid_view">Grid View</string>
     <string name="staggered_view_horizontal">Staggered View Horizontal</string>
     <string name="staggered_view_vertical">Staggered View Vertical</string>
+    <string name="runtime_permissions_txt">Please enable ALL permissions from app settings.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Coming soon....</string>
