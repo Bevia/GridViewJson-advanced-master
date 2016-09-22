@@ -96,6 +96,7 @@ Row 7
                         android:id="@+id/image"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:foreground="?android:attr/selectableItemBackground"
                         android:scaleType="centerCrop"
                         android:visibility="visible" />
                 </RelativeLayout>
@@ -130,6 +131,7 @@ Row 7
                         android:paddingRight="2dp"
                         android:paddingTop="2dp"
                         android:text="testing new adapter #1"
+                        android:clickable="false"
                         android:textColor="@color/Black"
                         android:textSize="18sp" />
 
@@ -149,6 +151,7 @@ Row 7
                         android:paddingRight="2dp"
                         android:paddingTop="0dp"
                         android:text="testing new adapter #1"
+                        android:foreground="?android:attr/selectableItemBackground"
                         android:textColor="@color/Black"
                         android:textSize="15sp" />
 

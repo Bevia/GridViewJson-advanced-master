@@ -97,6 +97,7 @@ Row 7
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:visibility="visible"
+                        android:foreground="?android:attr/selectableItemBackground"
                         android:scaleType="centerCrop" />
                 </RelativeLayout>
             </LinearLayout>
@@ -131,8 +132,7 @@ Row 7
                         android:gravity="center_vertical"
                         android:textColor="@color/Black"
                         android:text="testing new adapter #1"
-                        android:textSize="11sp"
-                        android:onClick="click01"/>
+                        android:textSize="11sp" />
 
                     <!-- android:gravity="center_vertical|center_horizontal" -->
 
@@ -150,6 +150,7 @@ Row 7
                         android:ellipsize="end"
                         android:background="@null"
                         android:textColor="@color/Black"
+                        android:foreground="?android:attr/selectableItemBackground"
                         android:text="testing new adapter #1"
                         android:textSize="9sp" />
 
@@ -179,6 +180,7 @@ Row 7
                             android:gravity="bottom"
                             android:textColor="@color/blue_stone"
                             android:text="testing new adapter #1"
+                            android:clickable="false"
                             android:textSize="10sp"/>
 
                         <TextView

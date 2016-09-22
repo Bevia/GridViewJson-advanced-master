@@ -105,6 +105,7 @@
                         android:id="@+id/image"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:foreground="?android:attr/selectableItemBackground"
                         android:visibility="visible"
                         android:scaleType="centerCrop" />
                 </RelativeLayout>
@@ -139,6 +140,7 @@
                         android:background="@null"
                         android:gravity="center_vertical"
                         android:textColor="@color/Black"
+                        android:clickable="false"
                         android:text="testing new adapter #1"
                         android:textSize="14sp" />
 
@@ -159,6 +161,7 @@
                         android:background="@null"
                         android:textColor="@color/Black"
                         android:text="testing new adapter #1"
+                        android:foreground="?android:attr/selectableItemBackground"
                         android:textSize="11sp" />
 
                 </LinearLayout>

@@ -216,7 +216,7 @@ public class GridViewFragment extends Fragment {
         super.onResume();
         refreshGridView();
     }
-    
+
     @Override public void onDestroyView() {
         super.onDestroyView();
         gridViewBinder.unbind();
