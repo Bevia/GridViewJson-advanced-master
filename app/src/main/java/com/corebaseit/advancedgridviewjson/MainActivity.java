@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -21,7 +22,9 @@ import android.view.MenuItem;
 import com.corebaseit.advancedgridviewjson.fragments.FavoritesGrid;
 import com.corebaseit.advancedgridviewjson.fragments.GridViewFragment;
 import com.corebaseit.advancedgridviewjson.fragments.ListViewFragment;
+import com.corebaseit.advancedgridviewjson.utils.AnalyticsApplication;
 import com.crashlytics.android.Crashlytics;
+import com.example.myaarlibrary.LibraryClass;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 
@@ -36,13 +39,13 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.fabric.sdk.android.Fabric;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AppBarLayout.OnOffsetChangedListener {
 
     /**
      * The {@link Tracker} used to record screen views.
      */
     private Tracker mTracker;
-
+    private Menu menu;
     @BindView(R.id.tabs)
     TabLayout tabLayout;
 
@@ -67,13 +70,17 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(getString(R.string.myTitle));
-        getSupportActionBar().setSubtitle(getString(R.string.poemsfromspain));
+
+        AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.appBarLayout);
+        appBarLayout.addOnOffsetChangedListener(this);
 
         setupViewPager(viewPager);
         //keep the three Fragments in memory!
         viewPager.setOffscreenPageLimit(3);
         tabLayout.setupWithViewPager(viewPager);
+
+        LibraryClass libraryClass =new LibraryClass();
+        libraryClass.printLog("Hello new .arr lib");
 
         UUID.randomUUID();
 
@@ -97,6 +104,23 @@ public class MainActivity extends AppCompatActivity {
         mTracker.setScreenName("Activity~" + "MainActivity");
         mTracker.send(new HitBuilders.ScreenViewBuilder().build());
         // [END screen_view_hit]
+    }
+
+    @Override
+    public void onOffsetChanged(AppBarLayout appBarLayout, int offset)
+    {
+        if (offset == 0)
+        {
+            getSupportActionBar().setTitle(getString(R.string.myTitle));
+            getSupportActionBar().setSubtitle(getString(R.string.poemsfromspain));
+            showOverflowMenu(true);
+        }
+        else
+        {
+            getSupportActionBar().setTitle(getString(R.string.myTitle));
+            getSupportActionBar().setSubtitle(" ");
+            showOverflowMenu(false);
+        }
     }
 
     private void setupViewPager(ViewPager viewPager) {
@@ -143,9 +167,15 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        this.menu = menu;
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+    }
+
+    public void showOverflowMenu(boolean showMenu){
+        if(menu == null)
+            return;
+        menu.setGroupVisible(R.id.main_menu_group, showMenu);
     }
 
     @Override

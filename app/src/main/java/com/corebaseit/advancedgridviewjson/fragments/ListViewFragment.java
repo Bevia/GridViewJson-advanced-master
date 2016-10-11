@@ -1,11 +1,13 @@
 package com.corebaseit.advancedgridviewjson.fragments;
 
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.AppBarLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -55,6 +57,7 @@ public class ListViewFragment extends Fragment {
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
     private ListRecycleAdapter newadapter;
+    private ActionBar supportActionBar;
 
     public ListViewFragment() {
     }

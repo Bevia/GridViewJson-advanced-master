@@ -1,6 +1,5 @@
 package com.corebaseit.advancedgridviewjson.fragments;
 
-import android.content.Context;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -13,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
 
-import com.corebaseit.advancedgridviewjson.AnalyticsApplication;
+import com.corebaseit.advancedgridviewjson.utils.AnalyticsApplication;
 import com.corebaseit.advancedgridviewjson.R;
 import com.corebaseit.advancedgridviewjson.adapters.ImageAdapter;
 import com.corebaseit.advancedgridviewjson.models.ElsPoetesJsonDataModel;

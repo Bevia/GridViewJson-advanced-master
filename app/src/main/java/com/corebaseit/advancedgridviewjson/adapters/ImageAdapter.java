@@ -88,8 +88,6 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
         return 0;
     }
 
-
-
     static class ViewHolder {
 
         AVLoadingIndicatorView myIndicator;
