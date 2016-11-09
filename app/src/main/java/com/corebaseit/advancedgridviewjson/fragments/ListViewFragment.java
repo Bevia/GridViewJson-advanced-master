@@ -56,7 +56,6 @@ public class ListViewFragment extends Fragment {
     private String TAG_THIRD_ACTOR;
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
-    private ListRecycleAdapter newadapter;
     private ActionBar supportActionBar;
 
     public ListViewFragment() {
@@ -65,7 +64,9 @@ public class ListViewFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.list_fragment, container, false);
+
+        View view = inflater.inflate(R.layout.list_fragment, container, false);
+        return view;
     }
 
     @Override
@@ -137,28 +138,8 @@ public class ListViewFragment extends Fragment {
         protected void onPostExecute(ArrayList<HashMap<String, String>> result) {
             super.onPostExecute(result);
 
-            newadapter = new ListRecycleAdapter(getActivity(), modelJsonPoets);
+            ListRecycleAdapter newadapter = new ListRecycleAdapter(getActivity(), modelJsonPoets);
             recyclerView.setAdapter(newadapter);
-
-            newadapter.setOnItemClickListener(new ListRecycleAdapter.OnItemClickListener() {
-                @Override
-                public void onItemClick(View view, int position) {
-
-                  /*  Toast.makeText(getActivity(), " from fragment... "
-                            + modelJsonPoets.get(position).getName(), Toast.LENGTH_SHORT).show();
-                    */
-                    Log.d("EXTRAS", "image: " + modelJsonPoets.get(position).getNumber());
-
-                    String numberOfImage = String.valueOf(modelJsonPoets.get(position).getNumber());
-
-                    Intent i = new Intent (getActivity(), ListDetailActivity.class);
-                    i.putExtra("imagePath", numberOfImage);
-                    i.putExtra("textBelowImage", modelJsonPoets.get(position).getName());
-                    i.putExtra("textBio", modelJsonPoets.get(position).getBioExtended());
-                    startActivity(i);
-
-                }
-            });
         }
     }
 

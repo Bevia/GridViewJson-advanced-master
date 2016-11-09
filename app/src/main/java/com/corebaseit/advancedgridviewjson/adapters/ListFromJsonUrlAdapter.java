@@ -1,9 +1,6 @@
 package com.corebaseit.advancedgridviewjson.adapters;
 
 import android.content.Context;
-import android.content.res.TypedArray;
-import android.graphics.Color;
-import android.graphics.Rect;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
@@ -38,13 +35,13 @@ public class ListFromJsonUrlAdapter extends RecyclerView.Adapter<ListFromJsonUrl
 
     private Context context;
     private LayoutInflater inflater;
-    List<ListFromJsonUrlModel> paymentHistoryModel = Collections.emptyList();
+    List<ListFromJsonUrlModel> listFromJsonUrlModel = Collections.emptyList();
     private static RelativeLayout clickable_view;
 
     public ListFromJsonUrlAdapter(Context context, List<ListFromJsonUrlModel> paymentHistoryModel) {
         this.context = context;
         inflater = LayoutInflater.from(context);
-        this.paymentHistoryModel = (paymentHistoryModel == null ?
+        this.listFromJsonUrlModel = (paymentHistoryModel == null ?
                 new ArrayList<ListFromJsonUrlModel>() : paymentHistoryModel);
     }
 
@@ -52,7 +49,7 @@ public class ListFromJsonUrlAdapter extends RecyclerView.Adapter<ListFromJsonUrl
     public ListFromJsonUrlAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View itemView = inflater.inflate(R.layout.payment_history_item_list, parent, false);
+        View itemView = inflater.inflate(R.layout.list_from_json_url_dapter, parent, false);
 
         return new ListFromJsonUrlAdapter.ViewHolder(itemView);
     }
@@ -61,7 +58,7 @@ public class ListFromJsonUrlAdapter extends RecyclerView.Adapter<ListFromJsonUrl
     @Override
     public void onBindViewHolder(ListFromJsonUrlAdapter.ViewHolder viewHolder, final int position) {
 
-        final ListFromJsonUrlModel currentPosition = paymentHistoryModel.get(position);
+        final ListFromJsonUrlModel currentPosition = listFromJsonUrlModel.get(position);
 
         viewHolder.type.setText(currentPosition.getType());
         viewHolder.name.setText(currentPosition.getName());
@@ -112,7 +109,7 @@ public class ListFromJsonUrlAdapter extends RecyclerView.Adapter<ListFromJsonUrl
 
     @Override
     public int getItemCount() {
-        return paymentHistoryModel.size();
+        return listFromJsonUrlModel.size();
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder implements

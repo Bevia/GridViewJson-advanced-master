@@ -1,5 +1,7 @@
 package com.corebaseit.advancedgridviewjson.fragments;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -10,7 +12,9 @@ import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import com.corebaseit.advancedgridviewjson.utils.AnalyticsApplication;
 import com.corebaseit.advancedgridviewjson.R;
@@ -188,7 +192,7 @@ public class GridViewFragment extends Fragment {
         protected void onPostExecute(ArrayList<HashMap<String, String>> result) {
             super.onPostExecute(result);
 
-            imageAdapter = new ImageAdapter(getActivity(), R.layout.gridview_layout, modelJsonPoets);
+            imageAdapter = new ImageAdapter(getActivity(), modelJsonPoets);
             gridView.setAdapter(imageAdapter);
 
         }

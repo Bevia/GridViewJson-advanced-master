@@ -71,9 +71,9 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
     private static final String EXTRA_PASS_JSON_POEM_ACTOR_2 = "POEMACTOR2";
     private static final String EXTRA_PASS_JSON_POEM_ACTOR_3 = "POEMACTOR3";
 
-    public ImageAdapter(Context context, int resource, List<ElsPoetesJsonDataModel> objects) {
+    public ImageAdapter(Context context, List<ElsPoetesJsonDataModel> objects) {
 
-        super(context, resource, objects);
+        super(context, android.R.layout.activity_list_item, objects);
         this.context = context;
         this.poetsList = objects;
 
@@ -109,54 +109,55 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
 
     public View getView(final int position, View view, ViewGroup parent) {
 
-        ViewHolder holder;
+        final ViewHolder viewHolder;
+        View rowView = view;
 
-        if (view != null) {
-            holder = (ViewHolder) view.getTag();
+        if (rowView == null) {
+
+            rowView = poeticaPoetsInflater.inflate(R.layout.gridview_layout, parent, false);
+            viewHolder = new ViewHolder(rowView);
+            rowView.setTag(viewHolder);
+
+            viewHolder.myIndicator = (AVLoadingIndicatorView)rowView.findViewById(R.id.myProgress);
+
+            viewHolder.bio.setTypeface(Typeface.createFromAsset(rowView.getContext().getAssets(),
+                    "fonts/Quattrocento Regular.ttf"));
+
+            viewHolder.name.setTypeface(Typeface.createFromAsset(rowView.getContext().getAssets(),
+                    "fonts/Quattrocento Regular.ttf"));
+
+            viewHolder.poem1.setTypeface(Typeface.createFromAsset(rowView.getContext().getAssets(),
+                    "fonts/Quattrocento Regular.ttf"));
+
+            viewHolder.poem2.setTypeface(Typeface.createFromAsset(rowView.getContext().getAssets(),
+                    "fonts/Quattrocento Regular.ttf"));
+
+            viewHolder.poem3.setTypeface(Typeface.createFromAsset(rowView.getContext().getAssets(),
+                    "fonts/Quattrocento Regular.ttf"));
+
+            viewHolder.actor1.setTypeface(Typeface.createFromAsset(rowView.getContext().getAssets(),
+                    "fonts/Quattrocento Regular.ttf"));
+
+            viewHolder.actor2.setTypeface(Typeface.createFromAsset(rowView.getContext().getAssets(),
+                    "fonts/Quattrocento Regular.ttf"));
+
+            viewHolder.actor3.setTypeface(Typeface.createFromAsset(rowView.getContext().getAssets(),
+                    "fonts/Quattrocento Regular.ttf"));
+
         }else {
-
-            view = poeticaPoetsInflater.inflate(R.layout.gridview_layout, parent, false);
-            holder = new ViewHolder(view);
-            view.setTag(holder);
-
-            holder.myIndicator = (AVLoadingIndicatorView)view.findViewById(R.id.myProgress);
-
-            holder.bio.setTypeface(Typeface.createFromAsset(view.getContext().getAssets(),
-                    "fonts/Quattrocento Regular.ttf"));
-
-            holder.name.setTypeface(Typeface.createFromAsset(view.getContext().getAssets(),
-                    "fonts/Quattrocento Regular.ttf"));
-
-            holder.poem1.setTypeface(Typeface.createFromAsset(view.getContext().getAssets(),
-                    "fonts/Quattrocento Regular.ttf"));
-
-            holder.poem2.setTypeface(Typeface.createFromAsset(view.getContext().getAssets(),
-                    "fonts/Quattrocento Regular.ttf"));
-
-            holder.poem3.setTypeface(Typeface.createFromAsset(view.getContext().getAssets(),
-                    "fonts/Quattrocento Regular.ttf"));
-
-            holder.actor1.setTypeface(Typeface.createFromAsset(view.getContext().getAssets(),
-                    "fonts/Quattrocento Regular.ttf"));
-
-            holder.actor2.setTypeface(Typeface.createFromAsset(view.getContext().getAssets(),
-                    "fonts/Quattrocento Regular.ttf"));
-
-            holder.actor3.setTypeface(Typeface.createFromAsset(view.getContext().getAssets(),
-                    "fonts/Quattrocento Regular.ttf"));
-
+            viewHolder = (ViewHolder) rowView.getTag();
         }
 
         final ElsPoetesJsonDataModel flower = poetsList.get(position);
 
-        holder.bio.setText(flower.getBio());
-        holder.name.setText(flower.getName());
-        holder.poem1.setText(flower.getNameFirstPoem());
-        holder.poem2.setText(flower.getNameSecondtPoem());
-        holder.poem3.setText(flower.getNameThirdPoem());
-        holder.actor1.setText(flower.getNameFirstActor());
-        holder.actor2.setText(flower.getNameSecondActor());
-        holder.actor3.setText(flower.getNameThirdActor());
+        viewHolder.bio.setText(flower.getBio());
+        viewHolder.name.setText(flower.getName());
+        viewHolder.poem1.setText(flower.getNameFirstPoem());
+        viewHolder.poem2.setText(flower.getNameSecondtPoem());
+        viewHolder.poem3.setText(flower.getNameThirdPoem());
+        viewHolder.actor1.setText(flower.getNameFirstActor());
+        viewHolder.actor2.setText(flower.getNameSecondActor());
+        viewHolder.actor3.setText(flower.getNameThirdActor());
 
         //progressView.setVisibility(View.VISIBLE);
         Glide.with(context)
@@ -164,23 +165,23 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
                         + enContextoImage_1 + flower.getNumber()
                         + "-Menu@2x.jpg")
                 .fitCenter()
-                .into(holder.imageView);
+                .into(viewHolder.imageView);
 
-        holder.bio.setOnClickListener(new View.OnClickListener() {
+        viewHolder.bio.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
                 datos(position);
             }
         });
 
-        holder.imageView.setOnClickListener(new View.OnClickListener() {
+        viewHolder.imageView.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
                 datos(position);
             }
         });
 
-        holder.poem1.setOnClickListener(new View.OnClickListener() {
+        viewHolder.poem1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
                 Toast.makeText(context, "" + flower.getName(),
@@ -189,7 +190,7 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
             }
         });
 
-        holder.poem2.setOnClickListener(new View.OnClickListener() {
+        viewHolder.poem2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
                 Toast.makeText(context, "" + flower.getName(),
@@ -198,7 +199,7 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
             }
         });
 
-        holder.poem3.setOnClickListener(new View.OnClickListener() {
+        viewHolder.poem3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
                 Toast.makeText(context, "" + flower.getName(),
@@ -207,10 +208,10 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
             }
         });
 
-        return view;
+        return rowView;
     }
 
-    private void datos(int position) {
+    public void datos(int position) {
 
         final ElsPoetesJsonDataModel flower = poetsList.get(position);
 

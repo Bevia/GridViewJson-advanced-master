@@ -17,8 +17,11 @@
         card_view:cardElevation="6dp">
 
         <RelativeLayout
+            android:id="@+id/relativeItemView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
             android:background="?android:attr/selectableItemBackground">
 
             <ImageView

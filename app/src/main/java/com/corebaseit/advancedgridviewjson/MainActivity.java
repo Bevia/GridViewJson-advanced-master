@@ -19,7 +19,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.corebaseit.advancedgridviewjson.fragments.FavoritesGrid;
+import com.corebaseit.advancedgridviewjson.fragments.FavoritesListFragment;
 import com.corebaseit.advancedgridviewjson.fragments.GridViewFragment;
 import com.corebaseit.advancedgridviewjson.fragments.ListViewFragment;
 import com.corebaseit.advancedgridviewjson.utils.AnalyticsApplication;
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity implements AppBarLayout.OnOf
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new GridViewFragment(), "Crid View");
         adapter.addFrag(new ListViewFragment(), "List View");
-        adapter.addFrag(new FavoritesGrid(), "Favorites View");
+        adapter.addFrag(new FavoritesListFragment(), "Favorites View");
         viewPager.setAdapter(adapter);
     }
 
