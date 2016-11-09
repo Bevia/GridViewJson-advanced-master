@@ -1,8 +1,10 @@
 package com.corebaseit.advancedgridviewjson.models;
 
 /**
- * Created by vincent on 10/2/16.
+ * Created by Vincent Bevia on 27/10/16. <br />
+ * vbevia@ieee.org
  */
+
 public class ElsPoetesJsonDataModel {
 
     private String name;

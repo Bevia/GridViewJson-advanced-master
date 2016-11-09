@@ -3,6 +3,11 @@ package com.corebaseit.advancedgridviewjson.models;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * Created by Vincent Bevia on 27/10/16. <br />
+ * vbevia@ieee.org
+ */
+
 public class ListFromJsonUrlModel {
 
     private String id, label, type, name, image;
