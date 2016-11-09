@@ -62,9 +62,16 @@ public class ListFromJsonUrlView extends AppCompatActivity implements
        // recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         recyclerView.addItemDecoration(new DividerItemCustomDecoration(this));
 
-        callRestService();
-        loadingIndicatorView();
         reloadingList();
+
+        if (internetConnectivityCheker.isOnline(ListFromJsonUrlView.this)) {
+            callRestService();
+            loadingIndicatorView();
+        }else{
+            internetConnectivityCheker.showNoInternetConnectionAlertDialogStay(ListFromJsonUrlView.this);
+            swipeContainer.setRefreshing(false);
+        }
+
     }
 
     private void loadingIndicatorView() {
