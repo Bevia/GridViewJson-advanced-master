@@ -1,8 +1,8 @@
 package com.corebaseit.advancedgridviewjson.jsonlistobject;
 
+import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -12,8 +12,9 @@ import com.corebaseit.advancedgridviewjson.R;
 import com.corebaseit.advancedgridviewjson.adapters.ListFromJsonUrlAdapter;
 import com.corebaseit.advancedgridviewjson.constants.Constants;
 import com.corebaseit.advancedgridviewjson.models.ListFromJsonUrlModel;
-import com.corebaseit.advancedgridviewjson.utils.InternetConnectivityCheker;
 import com.corebaseit.advancedgridviewjson.utils.DividerItemCustomDecoration;
+import com.corebaseit.advancedgridviewjson.utils.ErrorMessageDialog;
+import com.corebaseit.advancedgridviewjson.utils.InternetConnectivityCheker;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.Vector;
@@ -31,6 +32,7 @@ public class ListFromJsonUrlView extends AppCompatActivity implements
     private ListFromJsonUrlPresenter historyPresenter;
     private AVLoadingIndicatorView myIndicator;
     private SwipeRefreshLayout swipeContainer;
+    private ErrorMessageDialog dialog;
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -68,10 +70,18 @@ public class ListFromJsonUrlView extends AppCompatActivity implements
             callRestService();
             loadingIndicatorView();
         }else{
-            internetConnectivityCheker.showNoInternetConnectionAlertDialogStay(ListFromJsonUrlView.this);
+            //internetConnectivityCheker.showNoInternetConnectionAlertDialogStay(ListFromJsonUrlView.this);
+            //Creating your own AlertDialog:
+            showNoInternetConnectionDialog();
             swipeContainer.setRefreshing(false);
         }
 
+    }
+
+    private void showNoInternetConnectionDialog() {
+
+        dialog = new ErrorMessageDialog(this, "No internet connection");
+        dialog.Show();
     }
 
     private void loadingIndicatorView() {

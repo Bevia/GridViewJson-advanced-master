@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -18,6 +19,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.corebaseit.advancedgridviewjson.fragments.FavoritesListFragment;
 import com.corebaseit.advancedgridviewjson.fragments.GridViewFragment;
@@ -39,12 +41,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.fabric.sdk.android.Fabric;
 
+@SuppressWarnings("ConstantConditions")
 public class MainActivity extends AppCompatActivity implements AppBarLayout.OnOffsetChangedListener {
 
-    /**
-     * The {@link Tracker} used to record screen views.
-     */
-    private Tracker mTracker;
     private Menu menu;
     @BindView(R.id.tabs)
     TabLayout tabLayout;
@@ -72,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements AppBarLayout.OnOf
         setSupportActionBar(toolbar);
 
         AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.appBarLayout);
+        assert appBarLayout != null;
         appBarLayout.addOnOffsetChangedListener(this);
 
         setupViewPager(viewPager);
@@ -89,7 +89,10 @@ public class MainActivity extends AppCompatActivity implements AppBarLayout.OnOf
         // [START shared_tracker]
         // Obtain the shared Tracker instance.
         AnalyticsApplication application = (AnalyticsApplication) getApplication();
-        mTracker = application.getDefaultTracker();
+        /*
+      The {@link Tracker} used to record screen views.
+     */
+        Tracker mTracker = application.getDefaultTracker();
         // [END shared_tracker]
 
         // [START custom_event]
@@ -169,6 +172,22 @@ public class MainActivity extends AppCompatActivity implements AppBarLayout.OnOf
     public boolean onCreateOptionsMenu(Menu menu) {
         this.menu = menu;
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        new Handler().post(new Runnable() {
+            @Override
+            public void run() {
+                final View v =findViewById(R.id.action_more);
+                if (v != null) {
+                    v.setOnLongClickListener(new View.OnLongClickListener() {
+                        @Override
+                        public boolean onLongClick(View v) {
+                            return false;
+                        }
+                    });
+                }
+            }
+        });
+
         return true;
     }
 
@@ -181,11 +200,8 @@ public class MainActivity extends AppCompatActivity implements AppBarLayout.OnOf
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
 
-        return super.onOptionsItemSelected(item);
     }
 
     public static Drawable getAssetImage(Context context, String filename) throws IOException {

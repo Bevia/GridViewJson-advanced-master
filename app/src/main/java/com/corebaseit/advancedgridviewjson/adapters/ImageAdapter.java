@@ -120,29 +120,8 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
 
             viewHolder.myIndicator = (AVLoadingIndicatorView)rowView.findViewById(R.id.myProgress);
 
-            viewHolder.bio.setTypeface(Typeface.createFromAsset(rowView.getContext().getAssets(),
-                    "fonts/Quattrocento Regular.ttf"));
+            setTypefaceForTextViews(viewHolder, rowView);
 
-            viewHolder.name.setTypeface(Typeface.createFromAsset(rowView.getContext().getAssets(),
-                    "fonts/Quattrocento Regular.ttf"));
-
-            viewHolder.poem1.setTypeface(Typeface.createFromAsset(rowView.getContext().getAssets(),
-                    "fonts/Quattrocento Regular.ttf"));
-
-            viewHolder.poem2.setTypeface(Typeface.createFromAsset(rowView.getContext().getAssets(),
-                    "fonts/Quattrocento Regular.ttf"));
-
-            viewHolder.poem3.setTypeface(Typeface.createFromAsset(rowView.getContext().getAssets(),
-                    "fonts/Quattrocento Regular.ttf"));
-
-            viewHolder.actor1.setTypeface(Typeface.createFromAsset(rowView.getContext().getAssets(),
-                    "fonts/Quattrocento Regular.ttf"));
-
-            viewHolder.actor2.setTypeface(Typeface.createFromAsset(rowView.getContext().getAssets(),
-                    "fonts/Quattrocento Regular.ttf"));
-
-            viewHolder.actor3.setTypeface(Typeface.createFromAsset(rowView.getContext().getAssets(),
-                    "fonts/Quattrocento Regular.ttf"));
 
         }else {
             viewHolder = (ViewHolder) rowView.getTag();
@@ -209,6 +188,19 @@ public class ImageAdapter extends ArrayAdapter<ElsPoetesJsonDataModel> {
         });
 
         return rowView;
+    }
+
+    private void setTypefaceForTextViews(ViewHolder viewHolder, View rowView) {
+
+        TextView[] viewHolders = {viewHolder.bio, viewHolder.name, viewHolder.poem1, viewHolder.poem2,
+                viewHolder.poem3, viewHolder.actor1, viewHolder.actor2, viewHolder.actor3};
+
+         for(int k = 0; k < viewHolders.length; k++) {
+
+             TextView newTexName = viewHolders[k];
+             newTexName.setTypeface(Typeface.createFromAsset(rowView.getContext().getAssets(),
+                     "fonts/Quattrocento Regular.ttf"));
+         }
     }
 
     public void datos(int position) {

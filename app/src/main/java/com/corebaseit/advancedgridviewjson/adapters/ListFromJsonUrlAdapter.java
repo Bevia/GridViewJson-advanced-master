@@ -33,14 +33,12 @@ import butterknife.ButterKnife;
 
 public class ListFromJsonUrlAdapter extends RecyclerView.Adapter<ListFromJsonUrlAdapter.ViewHolder> {
 
-    private Context context;
-    private LayoutInflater inflater;
-    List<ListFromJsonUrlModel> listFromJsonUrlModel = Collections.emptyList();
-    private static RelativeLayout clickable_view;
+    private final Context context;
+    private List<ListFromJsonUrlModel> listFromJsonUrlModel = Collections.emptyList();
 
     public ListFromJsonUrlAdapter(Context context, List<ListFromJsonUrlModel> paymentHistoryModel) {
         this.context = context;
-        inflater = LayoutInflater.from(context);
+        LayoutInflater inflater = LayoutInflater.from(context);
         this.listFromJsonUrlModel = (paymentHistoryModel == null ?
                 new ArrayList<ListFromJsonUrlModel>() : paymentHistoryModel);
     }
@@ -131,7 +129,7 @@ public class ListFromJsonUrlAdapter extends RecyclerView.Adapter<ListFromJsonUrl
             ButterKnife.bind(this, itemView);
 
             //Need this to make it clickable:
-            clickable_view = (RelativeLayout) itemView.findViewById(R.id.clickable_view);
+            RelativeLayout clickable_view = (RelativeLayout) itemView.findViewById(R.id.clickable_view);
             clickable_view.setOnClickListener(this);
             clickable_view.setOnLongClickListener(this);
 

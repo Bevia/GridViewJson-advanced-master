@@ -13,7 +13,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.corebaseit.advancedgridviewjson.ListDetailActivity;
@@ -45,9 +44,8 @@ public class ListRecycleAdapter extends RecyclerView.Adapter<ListRecycleAdapter.
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int position) {
 
         View view = inflater.inflate(R.layout.list_row_item, parent, false);
-        MyViewHolder holder = new MyViewHolder(view);
 
-        return holder;
+        return new MyViewHolder(view);
 
     }
 
