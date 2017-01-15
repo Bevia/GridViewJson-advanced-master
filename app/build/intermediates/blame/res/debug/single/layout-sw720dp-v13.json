@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/res/merged/debug/layout-sw720dp-v13/popup_view_class.xml",
+        "source": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/res/layout-sw720dp/popup_view_class.xml"
+    },
+    {
+        "merged": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/res/merged/debug/layout-sw720dp-v13/list_row_item.xml",
+        "source": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/res/layout-sw720dp/list_row_item.xml"
+    },
+    {
+        "merged": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/res/merged/debug/layout-sw720dp-v13/gridview_layout.xml",
+        "source": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/res/layout-sw720dp/gridview_layout.xml"
+    }
+]

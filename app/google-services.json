@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "410559461448",
+    "project_id": "advancedgridviewjson"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410559461448:android:ee2ca1b58761f0da",
+        "android_client_info": {
+          "package_name": "com.corebaseit.advancedgridviewjson"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_OsyR2kbv8sIVNEG8F9StpNedRURcA9w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-79989776-1"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

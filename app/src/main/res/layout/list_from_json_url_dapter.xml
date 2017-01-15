@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_view_background"
+    tools:context="com.corebaseit.advancedgridviewjson.jsonlistobject.ListFromJsonUrlView">
+
+    <RelativeLayout
+        android:id="@+id/clickable_view"
+        style="@style/SelectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/gateway_logo"
+            android:layout_width="90dp"
+            android:layout_height="116dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="0dp"
+            android:contentDescription="@string/desc_img_row"
+            android:padding="2dp"
+            android:scaleType="centerInside" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="6dp"
+            android:layout_toRightOf="@+id/gateway_logo"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/gateway_logo"
+                android:gravity="center_vertical"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@+id/gateway_logo"
+                android:maxLines="5"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:textSize="14sp"></TextView>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

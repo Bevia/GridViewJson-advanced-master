@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_onboarder"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.corebaseit.advancedgridviewjson.fragments.FavoritesListFragment">
+
+    <Button
+        android:id="@+id/favorites_activity"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="6dp"
+        android:text="connect"
+        android:textAllCaps="true"
+        android:textColor="@color/blue_stone"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/main_textview"/>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="visible">
+
+    </ListView>
+
+</LinearLayout>

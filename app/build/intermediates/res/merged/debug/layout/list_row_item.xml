@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/lightgrey"
+    android:padding="0dp"
+    tools:context="com.corebaseit.advancedgridviewjson.fragments.ListViewFragment">
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        card_view:cardBackgroundColor="@color/textColorPrimary"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="6dp">
+
+        <RelativeLayout
+            android:id="@+id/relativeItemView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="90dp"
+                android:layout_height="116dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="0dp"
+                android:contentDescription="@string/desc_img_row"
+                android:padding="4dp"
+                android:scaleType="centerInside" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/image"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txv_row2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/text_view_row"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txv_row1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:lineSpacingMultiplier="1.2"
+                    android:maxLines="4"
+                    android:text="@string/text_view_row"
+                    android:textColor="@color/navigationBarColor"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
+
+
