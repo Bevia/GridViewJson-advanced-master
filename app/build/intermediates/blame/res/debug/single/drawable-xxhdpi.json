@@ -1,6 +1,18 @@
 [
     {
+        "merged": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_corebaseit_large.png",
+        "source": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/res/drawable-xxhdpi/ic_corebaseit_large.png"
+    },
+    {
+        "merged": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_corebaseit_small.png",
+        "source": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/res/drawable-xxhdpi/ic_corebaseit_small.png"
+    },
+    {
         "merged": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_history_white.png",
         "source": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_history_white.png"
+    },
+    {
+        "merged": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_corebaseit.png",
+        "source": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/res/drawable-xxhdpi/ic_corebaseit.png"
     }
 ]

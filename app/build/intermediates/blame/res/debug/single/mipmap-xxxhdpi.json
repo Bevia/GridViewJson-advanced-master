@@ -4,12 +4,12 @@
         "source": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/res/mipmap-xxxhdpi/ic_error_outline_black_36dp.png"
     },
     {
-        "merged": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_action_infomaterial.png",
-        "source": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/res/mipmap-xxxhdpi/ic_action_infomaterial.png"
-    },
-    {
         "merged": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_place_white_48dp.png",
         "source": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/res/mipmap-xxxhdpi/ic_place_white_48dp.png"
+    },
+    {
+        "merged": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_action_infomaterial.png",
+        "source": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/res/mipmap-xxxhdpi/ic_action_infomaterial.png"
     },
     {
         "merged": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_account_circle_black_36dp.png",

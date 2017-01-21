@@ -76,6 +76,10 @@
         "source": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable/abc_item_background_holo_dark.xml"
     },
     {
+        "merged": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/res/merged/debug/drawable/background_splash.xml",
+        "source": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/res/drawable/background_splash.xml"
+    },
+    {
         "merged": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/res/merged/debug/drawable/delete.png",
         "source": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/res/drawable/delete.png"
     },
@@ -90,6 +94,10 @@
     {
         "merged": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/res/merged/debug/drawable/heart_white.png",
         "source": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/res/drawable/heart_white.png"
+    },
+    {
+        "merged": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/res/merged/debug/drawable/corebaseit_safe.png",
+        "source": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/res/drawable/corebaseit_safe.png"
     },
     {
         "merged": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/res/merged/debug/drawable/warning_sigh.xml",

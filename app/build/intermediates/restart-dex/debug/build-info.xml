@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
     abi="armeabi-v7a,armeabi"
-    api-level="19"
-    density="tvdpi"
+    api-level="23"
+    density="xxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="11210602430481"
+    timestamp="83045967673192"
     token="-2677186723099562948"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="1843" />
+        duration="652" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="405" />
+        duration="302" />
     <task
         name="verifier"
-        duration="71" />
+        duration="131" />
 
     <artifact
         location="/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/outputs/apk/app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="11210602430481"
+        timestamp="83045967673192"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/outputs/apk/app-debug.apk"
