@@ -24,20 +24,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
-            android:name=".ElsPoetesPopUpView"
-            android:theme="@style/NoTitleDialog" />
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="b32d04bceed442ea237032d1adf15109e6bdeeed" />
 
         <activity android:name=".ListDetailActivity" />
+
         <activity android:name=".FavoritosActivity" />
-        <activity android:name=".jsonlistobject.ListFromJsonUrlView"></activity>
+
+        <activity android:name=".jsonlistobject.ListFromJsonUrlView" />
+
+        <activity android:name=".GridViewPopUpView"
+            android:theme="@style/NoTitleDialog" />
     </application>
 
 </manifest>

@@ -44,9 +44,6 @@
         <activity
             android:name="com.corebaseit.advancedgridviewjson.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name="com.corebaseit.advancedgridviewjson.ElsPoetesPopUpView"
-            android:theme="@style/NoTitleDialog" />
 
         <meta-data
             android:name="io.fabric.ApiKey"
@@ -55,6 +52,9 @@
         <activity android:name="com.corebaseit.advancedgridviewjson.ListDetailActivity" />
         <activity android:name="com.corebaseit.advancedgridviewjson.FavoritosActivity" />
         <activity android:name="com.corebaseit.advancedgridviewjson.jsonlistobject.ListFromJsonUrlView" />
+        <activity
+            android:name="com.corebaseit.advancedgridviewjson.GridViewPopUpView"
+            android:theme="@style/NoTitleDialog" />
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"

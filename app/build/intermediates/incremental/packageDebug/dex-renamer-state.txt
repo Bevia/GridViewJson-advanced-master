@@ -1,4 +1,4 @@
-#Sat Jan 21 12:18:56 CET 2017
+#Sun Jan 22 13:47:59 CET 2017
 base.0=/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_8e8d5863527f19a39603b0cf6dc771b4e5acdaf5
 renamed.1=classes.dex
 renamed.0=classes2.dex

@@ -5,29 +5,29 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="83045967673192"
+    timestamp="111002220201290"
     token="-2677186723099562948"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="652" />
+        duration="674" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="302" />
+        duration="336" />
     <task
         name="verifier"
-        duration="131" />
+        duration="101" />
 
     <artifact
         location="/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/outputs/apk/app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="83045967673192"
+        timestamp="111002220201290"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/outputs/apk/app-debug.apk"

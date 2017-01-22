@@ -144,12 +144,12 @@
         "source": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable-xxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
-        "merged": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png",
-        "source": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png"
-    },
-    {
         "merged": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_text_light_focused.9.png",
         "source": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.2.0/res/drawable-xxhdpi-v4/common_plus_signin_btn_text_light_focused.9.png"
+    },
+    {
+        "merged": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png",
+        "source": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png"
     },
     {
         "merged": "/Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png",

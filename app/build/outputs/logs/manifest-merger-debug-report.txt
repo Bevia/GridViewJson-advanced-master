@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:2:1-43:12
+ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:2:1-45:12
 	package
 		ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:3:5-50
 		INJECTED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml
@@ -45,7 +45,7 @@ ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/
 	android:name
 		ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:8:22-78
 application
-ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:10:5-41:19
+ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:10:5-43:19
 MERGED from [com.crashlytics.sdk.android:crashlytics:2.5.5] /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics/2.5.5/AndroidManifest.xml:11:5-20
 MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.8] /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics-core/2.3.8/AndroidManifest.xml:11:5-20
 MERGED from [com.crashlytics.sdk.android:answers:1.3.6] /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/answers/1.3.6/AndroidManifest.xml:11:5-20
@@ -101,35 +101,35 @@ ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/
 	android:name
 		ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:24:27-74
 activity#com.corebaseit.advancedgridviewjson.MainActivity
-ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:28:9-29:58
+ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:27:9-29:59
 	android:theme
 		ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:29:13-56
 	android:name
-		ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:28:19-47
-activity#com.corebaseit.advancedgridviewjson.ElsPoetesPopUpView
-ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:30:9-32:52
-	android:theme
-		ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:32:13-49
-	android:name
-		ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:31:13-47
+		ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:28:13-41
 meta-data#io.fabric.ApiKey
-ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:34:9-36:72
+ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:31:9-33:72
 	android:value
-		ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:36:13-69
+		ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:33:13-69
 	android:name
-		ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:35:13-44
+		ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:32:13-44
 activity#com.corebaseit.advancedgridviewjson.ListDetailActivity
-ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:38:9-56
+ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:35:9-56
 	android:name
-		ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:38:19-53
+		ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:35:19-53
 activity#com.corebaseit.advancedgridviewjson.FavoritosActivity
-ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:39:9-55
+ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:37:9-55
 	android:name
-		ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:39:19-52
+		ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:37:19-52
 activity#com.corebaseit.advancedgridviewjson.jsonlistobject.ListFromJsonUrlView
-ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:40:9-81
+ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:39:9-72
 	android:name
-		ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:40:19-69
+		ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:39:19-69
+activity#com.corebaseit.advancedgridviewjson.GridViewPopUpView
+ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:41:9-42:52
+	android:theme
+		ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:42:13-49
+	android:name
+		ADDED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml:41:19-52
 uses-sdk
 INJECTED from /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.crashlytics.sdk.android:crashlytics:2.5.5] /Users/vbevia/AndroidStudioProjects/GridViewJson-advanced-master/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics/2.5.5/AndroidManifest.xml:7:5-43

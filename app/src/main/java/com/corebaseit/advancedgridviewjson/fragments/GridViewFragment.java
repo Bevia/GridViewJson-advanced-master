@@ -1,7 +1,5 @@
 package com.corebaseit.advancedgridviewjson.fragments;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -12,13 +10,11 @@ import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.Toast;
 
+import com.corebaseit.advancedgridviewjson.adapters.GridViewAdapter;
 import com.corebaseit.advancedgridviewjson.utils.AnalyticsApplication;
 import com.corebaseit.advancedgridviewjson.R;
-import com.corebaseit.advancedgridviewjson.adapters.ImageAdapter;
 import com.corebaseit.advancedgridviewjson.models.ElsPoetesJsonDataModel;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
@@ -46,7 +42,7 @@ public class GridViewFragment extends Fragment {
     private Tracker mTracker;
 
     @BindView(R.id.gridView) GridView gridView;
-    private ImageAdapter imageAdapter;
+    private GridViewAdapter imageAdapter;
 
     @BindString(R.string.TAG_POETS_JSON) String TAG_POETS_JSON;
 
@@ -192,7 +188,7 @@ public class GridViewFragment extends Fragment {
         protected void onPostExecute(ArrayList<HashMap<String, String>> result) {
             super.onPostExecute(result);
 
-            imageAdapter = new ImageAdapter(getActivity(), modelJsonPoets);
+            imageAdapter = new GridViewAdapter(getActivity(), modelJsonPoets);
             gridView.setAdapter(imageAdapter);
 
         }

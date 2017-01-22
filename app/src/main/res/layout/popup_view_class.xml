@@ -1,6 +1,6 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="340dp"
     android:layout_width="310dp"
+    android:layout_height="340dp"
     android:background="@null"
     android:orientation="vertical">
 
@@ -10,21 +10,21 @@
 
     <LinearLayout
         android:id="@+id/horizontal1Forlinear1"
-        android:orientation="horizontal"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_width="match_parent">
+        android:orientation="horizontal">
 
         <LinearLayout
             android:id="@+id/linear1"
-            android:layout_height="match_parent"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="0.5">
 
             <LinearLayout
                 android:id="@+id/linear1LSVL"
-                android:layout_weight="0.25"
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
                 android:orientation="vertical">
 
                 <ImageView
@@ -36,57 +36,68 @@
 
             <LinearLayout
                 android:id="@+id/linear1LSVR"
-                android:layout_weight="0.25"
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
                 android:orientation="vertical">
+
 
                 <LinearLayout
                     android:id="@+id/linear1LSVRUp"
-                    android:layout_weight="0.09"
-                    android:layout_height="match_parent"
                     android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.09"
                     android:background="@color/silver"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textUpperSide1"
+                    <ScrollView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="top"
-                        android:layout_marginTop="0dp"
-                        android:paddingLeft="2dp"
-                        android:paddingRight="2dp"
-                        android:paddingTop="2dp"
-                        android:background="@null"
-                        android:gravity="center_vertical"
-                        android:textColor="@color/Black"
-                        android:textSize="14sp" />
+                        android:layout_height="match_parent"
+                        android:padding="4dp">
 
-                    <!-- android:gravity="center_vertical|center_horizontal" -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textUpperSide2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="top"
-                        android:layout_marginTop="4dp"
-                        android:layout_marginBottom="2dp"
-                        android:maxLines="16"
-                        android:ellipsize="end"
-                        android:paddingLeft="2dp"
-                        android:paddingRight="2dp"
-                        android:background="@null"
-                        android:textColor="@color/Black"
-                        android:textSize="12sp" />
+                            <TextView
+                                android:id="@+id/textUpperSide1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_marginTop="0dp"
+                                android:background="@null"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="2dp"
+                                android:paddingRight="2dp"
+                                android:paddingTop="2dp"
+                                android:textColor="@color/Black"
+                                android:textSize="14sp" />
 
+                            <!-- android:gravity="center_vertical|center_horizontal" -->
+
+                            <TextView
+                                android:id="@+id/textUpperSide2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_marginBottom="2dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:paddingLeft="2dp"
+                                android:paddingRight="2dp"
+                                android:textColor="@color/Black"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+                    </ScrollView>
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/linear1LSVRBottom"
-                    android:layout_weight="0.16"
-                    android:layout_height="match_parent"
                     android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.16"
                     android:orientation="vertical">
 
                     <TextView
@@ -95,13 +106,13 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="top"
                         android:layout_marginTop="4dp"
-                        android:paddingLeft="2dp"
-                        android:paddingRight="2dp"
                         android:background="@null"
                         android:gravity="bottom"
+                        android:onClick="click1"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
                         android:textColor="@color/blue_stone"
-                        android:textSize="10sp"
-                        android:onClick="click1"/>
+                        android:textSize="10sp" />
 
                     <TextView
                         android:id="@+id/textView2linear1LSVRBottomBottom"
@@ -109,9 +120,9 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="top"
                         android:layout_marginTop="0dp"
+                        android:background="@null"
                         android:paddingLeft="2dp"
                         android:paddingRight="2dp"
-                        android:background="@null"
                         android:textColor="@color/Black"
                         android:textSize="10sp" />
 
@@ -121,13 +132,13 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="top"
                         android:layout_marginTop="10dp"
-                        android:paddingLeft="2dp"
-                        android:paddingRight="2dp"
                         android:background="@null"
                         android:gravity="bottom"
+                        android:onClick="click2"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
                         android:textColor="@color/blue_stone"
-                        android:textSize="10sp"
-                        android:onClick="click2"/>
+                        android:textSize="10sp" />
 
                     <TextView
                         android:id="@+id/textView4linear1LSVRBottomBottom"
@@ -135,9 +146,9 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="top"
                         android:layout_marginTop="0dp"
+                        android:background="@null"
                         android:paddingLeft="2dp"
                         android:paddingRight="2dp"
-                        android:background="@null"
                         android:textColor="@color/Black"
                         android:textSize="10sp" />
 
@@ -147,13 +158,13 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="top"
                         android:layout_marginTop="10dp"
-                        android:paddingLeft="2dp"
-                        android:paddingRight="2dp"
                         android:background="@null"
                         android:gravity="bottom"
+                        android:onClick="click3"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
                         android:textColor="@color/blue_stone"
-                        android:textSize="10sp"
-                        android:onClick="click3"/>
+                        android:textSize="10sp" />
 
                     <TextView
                         android:id="@+id/textView5linear1LSVRBottomBottom"
@@ -161,9 +172,9 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="top"
                         android:layout_marginTop="0dp"
+                        android:background="@null"
                         android:paddingLeft="2dp"
                         android:paddingRight="2dp"
-                        android:background="@null"
                         android:textColor="@color/Black"
                         android:textSize="10sp" />
 
